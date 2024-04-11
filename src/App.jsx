@@ -3,7 +3,7 @@ import './App.css'
 function App() {
 
   return (
-    <di className="flex flex-col items-center justify-center">
+    <di className="flex flex-col items-center justify-center gap-5">
       <h1 className="text-3xl font-bold underline">
         Hello Victor !
       </h1>
