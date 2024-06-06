@@ -46,8 +46,8 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               ml: 0.5,
               borderTopLeftRadius: location.pathname === item.path ? '20px' : 0,
               borderBottomLeftRadius: location.pathname === item.path ? '20px' : 0,
-              pt: 0.2,
-              pb: 0.2,
+              pt: 0.5,
+              pb: 0.5,
               display: 'flex',
               alignItems: 'center',
             }}

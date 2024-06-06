@@ -49,7 +49,11 @@ function App() {
               </IconButton>
             )}
             <Typography variant="h6" noWrap component="div">
-              My Dashboard
+              <div>
+                <h1 className='text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
+                  <span>M</span>ovic<span>X</span>
+                </h1>
+              </div>
             </Typography>
           </Toolbar>
         </AppBar>
