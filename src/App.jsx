@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import React, { lazy, Suspense } from "react";
-
-
+import React, { lazy, Suspense, useState } from "react";
+import { Box, CssBaseline, AppBar, Toolbar, IconButton, Typography } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Sidebar from './components/sidebar/Sidebar';
 
 // Import views using lazy loading
 const Home = lazy(() => import('./views/home/HomePage'));
@@ -11,18 +14,58 @@ const Blog = lazy(() => import('./views/blog/BlogPost'));
 const Projects = lazy(() => import('./views/projects/ProjectsPage'));
 
 function App() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width:600px)');
+  const isTablet = useMediaQuery('(max-width:960px)');
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   return (
     <Router>
-      <Routes>
-        <Route path='/' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Home /></Suspense>} />
-        <Route path='/about' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><About /></Suspense>}/>
-        <Route path='/contact-us' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Contact /></Suspense>} />
-        <Route path='/blog' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Blog /></Suspense>}/>
-        <Route path='/projects' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Projects /></Suspense>}/>
-      </Routes>
+      <CssBaseline />
+      <Box sx={{ display: 'flex' }} className='bg-cover'>
+        <AppBar 
+          position="fixed" 
+          sx={{ 
+            zIndex: (theme) => theme.zIndex.drawer + 1, 
+            backgroundColor: 'transparent',
+            color: 'black',
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
+          }}
+        >
+          <Toolbar>
+            {(isMobile || isTablet) && (
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 1 }}
+              >
+                {mobileOpen ? <CloseIcon /> : <MenuIcon />}
+              </IconButton>
+            )}
+            <Typography variant="h6" noWrap component="div">
+              My Dashboard
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Sidebar mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} isMobile={isMobile} isTablet={isTablet} />
+        <Box component="main" sx={{ flexGrow: 1, pt: 7.5 }}>
+          <Routes>
+            <Route path='/' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Home /></Suspense>} />
+            <Route path='/about' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><About /></Suspense>} />
+            <Route path='/contact-us' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Contact /></Suspense>} />
+            <Route path='/blog' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Blog /></Suspense>} />
+            <Route path='/projects' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Projects /></Suspense>} />
+          </Routes>
+        </Box>
+      </Box>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
