@@ -2,27 +2,17 @@ import React from 'react'
 
 function BlogPost() {
   return (
-    <section className='h-[100vh] max-w-screen flex'>
-      <div className='Dashboard-resDiv w-[23.5rem] bg-gray-300'></div>
-      <section className='glass-effect bg-white bg-opacity-50 backdrop-blur-xl pl-4 pr-6 pb-6 shadow-lg'>
-        <div className='flex-wrap pt-3'>
-          Projects Page........................................ Projects Page........................................ Projects Page........................................ Projects Page........................................ Projects Page........................................ Projects Page........................................ Projects Page........................................ Projects Page................................................. Projects Page
-          Projects Page........................................ Projects Page........................................ Projects Page................................. Projects Page
+    <section className='h-[100vh] w-full flex Home'>
+      <div className='Dashboard-resDiv-home w-[23.5rem] bg-gray-300'></div>
+      <section className='glass-effect-3 bg-white bg-opacity-50 backdrop-blur-xl shadow-lg flex-grow'>
+        <div className='Home-box pt-3 w-full'>
+          Projects Page........................................ Projects Page........................................ 
+          Projects Page........................................ Projects Page........................................ 
+          <section className='bg-white w-full h-[30rem]'>
+            <div>Blog 1</div>
+          </section>
+          <section>2</section>
         </div>
-        <div>Blogs</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
-        <div>Hell</div>
       </section>
     </section>
   );

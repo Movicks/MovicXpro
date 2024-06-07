@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  padding: 0;
+  margin: 0;
+}
+#root{
+  width: 100vw;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,7 +23,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 /* a {
   font-weight: 500;
   color: #646cff;
@@ -54,21 +60,37 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* HomePage.css */
+
+/* Hide scrollbar for WebKit browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 
 @media (min-width: 1298.60px) {
   .Dashboard-resDiv{
     width: 40.7rem;
   }
+  .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
+    width: 15.2rem;
+    background: white;
+  }
 }
 @media (max-width: 1298.59px) {
-  .Dashboard-resDiv{
+  .Dashboard-resDiv, .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
     width: 51.5rem;
   }
 }
 
 @media (max-width: 900px) {
-  .Dashboard-resDiv{
+  .Dashboard-resDiv, .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
     display: none;
   }
   .Drawer-container{
@@ -76,10 +98,13 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .Dashboard-resDiv{
+  .Dashboard-resDiv, .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
     display: none;
   }
   .Drawer-container{
     padding-top: 3.5rem;
   }
+  /* .glass-effect-3{
+    padding: 5px 0px;
+  } */
 }

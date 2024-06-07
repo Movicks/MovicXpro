@@ -25,7 +25,7 @@ function App() {
   return (
     <Router>
       <CssBaseline />
-      <Box sx={{ display: 'flex' }} className='bg-cover'>
+      <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden' }} className='bg-cover '>
         <AppBar 
           position="fixed" 
           sx={{ 
@@ -36,7 +36,7 @@ function App() {
             boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
           }}
         >
-          <Toolbar>
+          <Toolbar className='pt-2'>
             {(isMobile || isTablet) && (
               <IconButton
                 color="inherit"
@@ -49,22 +49,23 @@ function App() {
               </IconButton>
             )}
             <Typography variant="h6" noWrap component="div">
-              <div className='relative'>
-                <h1 className='text-3xl h-[3rem] flex items-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
+              <div className='relative w-[7.7rem]'>
+                <h1 className='text-2xl h-[3rem] flex items-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
                   <span>M</span>ovic<span className='X-styles'>X</span>
                 </h1>
+                <span className='absolute pl-1 pr-1 right-0 top-0 text-black text-lg bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 text-white rounded-[4px]'>Pro</span>
               </div>
             </Typography>
           </Toolbar>
         </AppBar>
         <Sidebar mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} isMobile={isMobile} isTablet={isTablet} />
-        <Box component="main" sx={{ flexGrow: 1, pt: 7.5 }}>
+        <Box component="main" sx={{ flexGrow: 1, pt: 7.5, overflow: 'auto' }}>
           <Routes>
-            <Route path='/' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Home /></Suspense>} />
-            <Route path='/about' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><About /></Suspense>} />
-            <Route path='/contact-us' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Contact /></Suspense>} />
-            <Route path='/blog' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Blog /></Suspense>} />
-            <Route path='/projects' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh]">Loading...</div>}><Projects /></Suspense>} />
+            <Route path='/' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><Home /></Suspense>} />
+            <Route path='/about' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><About /></Suspense>} />
+            <Route path='/contact-us' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><Contact /></Suspense>} />
+            <Route path='/blog' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><Blog /></Suspense>} />
+            <Route path='/projects' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><Projects /></Suspense>} />
           </Routes>
         </Box>
       </Box>
