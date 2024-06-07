@@ -30,9 +30,9 @@ function App() {
           position="fixed" 
           sx={{ 
             zIndex: (theme) => theme.zIndex.drawer + 1, 
-            backgroundColor: 'transparent',
+            backgroundColor: 'white',
             color: 'black',
-            backdropFilter: 'blur(10px)',
+            backdropFilter: 'blur(30px)',
             boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
           }}
         >
@@ -49,9 +49,9 @@ function App() {
               </IconButton>
             )}
             <Typography variant="h6" noWrap component="div">
-              <div>
-                <h1 className='text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
-                  <span>M</span>ovic<span>X</span>
+              <div className='relative'>
+                <h1 className='text-3xl h-[3rem] flex items-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
+                  <span>M</span>ovic<span className='X-styles'>X</span>
                 </h1>
               </div>
             </Typography>

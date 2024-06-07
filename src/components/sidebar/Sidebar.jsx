@@ -26,7 +26,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
   }, []);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: 'rgba(10, 10, 73, 0.2)' }} className='drawer-container pt-[4rem] flex flex-col gap-2 bg-[rgba(10, 10, 73, 0.2)]'>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: 'transparent' }} className='drawer-container pt-[4rem] flex flex-col gap-2 bg-[rgba(10, 10, 73, 0.2)]'>
       <List sx={{ backgroundColor: 'transparent' }}>
         {[
           { text: 'Home', path: '/' },
