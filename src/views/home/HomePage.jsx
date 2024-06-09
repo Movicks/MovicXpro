@@ -6,8 +6,8 @@ function HomePage() {
       <div className="Dashboard-resDiv"></div>
       <main className="glass-effect-3 bg-opacity-50 h-full flex-grow">
         <div className="Home-box w-full flex flex-col md:flex-row justify-between p-3 gap-3">
-          <section className="LeftHand pt-10 pl-3 pr-3 pb-3 bg-white w-full md:w-1/2 lg:w-[57rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
-            <div className="Home-Header-main h-[15rem] rounded-2xl pl-6 pt-6 pr-6 flex justify-between relative overflow-hidden">
+          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-white w-full md:w-1/2 lg:w-[57rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
+            <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between relative overflow-hidden">
               <div className='flex flex-col justify-between h-[8.5rem] items-start'>
                 <header className="text-3xl font-bold w-[15.8rem] text-white">Exciting projects every week</header>
                 <button className="bg-white px-[47px] py-2 rounded-full border-2 border-gray-400 opacity-90 glass-effect">

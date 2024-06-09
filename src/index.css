@@ -169,6 +169,10 @@ body {
   .Hide-bubble{
     display: none;
   }
+  .Home-Header-main{
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+  }
 }
 
 @media (max-width: 1285.59px) {
@@ -198,8 +202,8 @@ body {
     display: none;
   }
   .Avatar-container{
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
   }
   .Avatar-container img{
     width: 8rem;
