@@ -49,17 +49,17 @@ function App() {
               </IconButton>
             )}
             <Typography variant="h6" noWrap component="div">
-              <div className='relative w-[7.7rem]'>
+              <div className='relative w-[7.6rem]'>
                 <h1 className='text-2xl h-[3rem] flex items-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
                   <span>M</span>ovic<span className='X-styles'>X</span>
                 </h1>
-                <span className='absolute pl-1 pr-1 right-0 top-0 text-black text-lg bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 text-white rounded-[4px]'>Pro</span>
+                <span className='h-[1.5rem] flex items-center absolute pl-1 pr-1 pt-1 pb-1 right-0 top-[2px] text-black text-lg bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 text-white rounded-[4px]'>Pro</span>
               </div>
             </Typography>
           </Toolbar>
         </AppBar>
         <Sidebar mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} isMobile={isMobile} isTablet={isTablet} />
-        <Box component="main" sx={{ flexGrow: 1, pt: 7.5, overflow: 'auto' }}>
+        <Box component="main" sx={{ flexGrow: 1, pt: 7.5, overflow: 'auto', height: '100vh', backgroundColor: 'transparent' }} className='overflow-auto scrollbar-hide'>
           <Routes>
             <Route path='/' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><Home /></Suspense>} />
             <Route path='/about' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">Loading...</div>}><About /></Suspense>} />

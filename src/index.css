@@ -2,35 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   padding: 0;
   margin: 0;
+  height: 100vh;
+  background: rgb(29, 29, 29);
 }
-#root{
+
+#root {
   width: 100vw;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 }
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #060606;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-} */
 
 body {
   margin: 0;
@@ -38,29 +35,119 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  height: 100vh;
 }
-/* .glass-effect {
-  background: linear-gradient(135deg, rgba(88, 99, 246, 0.76), rgba(10, 10, 73, 0.2));
+.Home{
+  height: 100vh;
+  background: transparent;
+}
+.Avatar-container{
+  background: linear-gradient(135deg, #6371f6, #ADB6D8);
+}
+.Avatar-container img{
+  width: 15rem;
+  height: 15rem;
+  border-radius: 20%;
+}
+.glass-effect {
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.788);
+  border: 1px solid rgba(168, 168, 168, 0.81);
+  font-size: larger;
+  color: #6371f6;
+  transition: 0.3s ease-in-out;
+}
+.glass-effect:hover {
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  opacity: 50;
-} */
+  color: white;
+}
+
 .glass-effect-2 {
-  background: linear-gradient(135deg, rgba(88, 99, 246, 0.76), rgba(10, 10, 73, 0.2));
+  background: linear-gradient(135deg, #848FF1, #ADB6D8);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .glass-effect-3 {
-  background: #9dd7f6;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  height: 100vh;
+}
+.Home-Header-main{
+  background: linear-gradient(135deg, #848FF1, #ADB6D8);
+}
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-/* HomePage.css */
+@keyframes bubbleDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bubbleLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bubbleRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.314);
+}
+
+.bubble-up {
+  animation: bubbleUp 7s infinite ease-in-out;
+}
+
+.bubble-down {
+  animation: bubbleDown 5s infinite ease-in-out;
+}
+
+.bubble-left {
+  animation: bubbleLeft 9s infinite ease-in-out;
+}
+
+.bubble-right {
+  animation: bubbleRight 6s infinite ease-in-out;
+}
+
 
 /* Hide scrollbar for WebKit browsers */
 .hide-scrollbar::-webkit-scrollbar {
@@ -74,37 +161,55 @@ body {
 }
 
 
-@media (min-width: 1298.60px) {
-  .Dashboard-resDiv{
-    width: 40.7rem;
-  }
-  .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
-    width: 15.2rem;
+@media (min-width: 1285.60px) {
+  .Dashboard-resDiv {
+    width: 15rem;
     background: white;
   }
-}
-@media (max-width: 1298.59px) {
-  .Dashboard-resDiv, .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
-    width: 51.5rem;
+  .Hide-bubble{
+    display: none;
   }
 }
 
-@media (max-width: 900px) {
-  .Dashboard-resDiv, .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
+@media (max-width: 1285.59px) {
+  .Dashboard-resDiv {
+    width: 15rem;
+    background: white;
+  }
+  .Home{
+    height: 100vh;
+  }
+  .Hide-bubble{
     display: none;
   }
-  .Drawer-container{
+}
+
+@media (max-width: 959px) {
+  .Dashboard-resDiv {
+    display: none;
+  }
+  .Drawer-container {
     padding-top: 4rem;
   }
 }
+
 @media (max-width: 600px) {
-  .Dashboard-resDiv, .Dashboard-resDiv-home, .Dashboard-resDiv-Project{
+  .Dashboard-resDiv {
     display: none;
   }
-  .Drawer-container{
+  .Avatar-container{
+    width: 13.6rem;
+    height: 12rem;
+  }
+  .Avatar-container img{
+    width: 10.5rem;
+    height: 10.5rem;
+    border-radius: 30%;
+  }
+  .Hide-bubble{
+    display: block;
+  }
+  .Drawer-container {
     padding-top: 3.5rem;
   }
-  /* .glass-effect-3{
-    padding: 5px 0px;
-  } */
 }

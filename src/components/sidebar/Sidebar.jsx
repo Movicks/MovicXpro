@@ -26,7 +26,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
   }, []);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: 'transparent' }} className='drawer-container pt-[4rem] flex flex-col gap-2 bg-[rgba(10, 10, 73, 0.2)]'>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: 'transparent' }} className='drawer-container pt-[4rem] flex flex-col gap-2 bg-[rgba(10, 10, 73, 0.2)] overflow-auto scrollbar-hide'>
       <List sx={{ backgroundColor: 'transparent' }}>
         {[
           { text: 'Home', path: '/' },
@@ -104,7 +104,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
         onClose={handleDrawerToggle}
         sx={{
           display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#dfebfa' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#dfebfa', borderRight: '3px solid #d1d5db' },
         }}
       >
         {drawer}
@@ -114,7 +114,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'none', md: 'block', lg: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#dfebfa' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#dfebfa', borderRight: '3px solid #d1d5db' },
           }}
           open
         >

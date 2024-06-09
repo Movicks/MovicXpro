@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// const flowbite = require("flowbite-react/tailwind");
 export default {
   content: [
     "./index.html",
@@ -15,6 +14,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* Hide scrollbar for Webkit browsers */
+          '::-webkit-scrollbar': {
+            display: 'none',
+          },
+          /* Hide scrollbar for IE, Edge and Firefox */
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        }
+      });
+    }
+  ],
 }
-
