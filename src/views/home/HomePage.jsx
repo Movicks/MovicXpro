@@ -1,6 +1,7 @@
 import React from 'react';
-import LogoAI from '../../../public/Images/LogoAI.jpg'
+import LogoAI from '../../assets/Images/LogoAI.jpg'
 import { Link } from 'react-router-dom';
+import { CiHeart, CiLocationArrow1 } from 'react-icons/ci';
 
 function HomePage() {
   return (
@@ -54,7 +55,7 @@ function HomePage() {
               </div>
               <div className='shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col mb-1 md:mb-0 p-3 gap-2'>
                 <h1 className='text-xl font-bold text-[#6371f6] underline'>Who is Movicx ?</h1>
-                <p>
+                <p className='text-start break-all'>
                   Onaiterimoh Victor Idepe, also known as Movicx, is a passionate
                   Front-end Developer specializing in bringing high quality UI/UX designs
                   to life. He excels at crafting interactive and user-centric web pages, always striving
@@ -82,18 +83,51 @@ function HomePage() {
             </section>
           </section>
           <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[20rem] h-[auto] gap-3 flex flex-col justify-between">
-            <div className='Recent-Project-box bg-white h-[35rem] shadow-custom rounded-2xl px-4 pt-9 pb-3 flex flex-col gap-1'>
+            <div className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
               <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
               <div className='w-full h-[2px] bg-gray-300'></div>
-              <div className='bg-red-500 h-[auto] Project-Card'>
-                <div className='Project-Image-container'>Project image container</div>
-                <div>Hello Paragraph</div>
-                <div>Project Stacks</div>
+              <div className='bg-white h-[auto] Project-Card p-2 shadow-custom rounded-xl flex flex-col gap-2'>
+                <div className='relative flex items-start justify-between mb-2 h-[10rem] pointer-events-none Project-Image-container rounded-2xl overflow-hidden'>
+                  <img src='https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=' alt='Project'
+                    className='Project-Banner w-full h-full bg-cover rounded-2xl'
+                  />
+                  <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-3'>
+                    <div className='bg-transparent w-full flex justify-end'>
+                      <button className='Like-Project-btn p-1 bg-white rounded-full opacity-90'>
+                        <CiHeart className='Like-Project-btn-Icon text-2xl' />
+                      </button>
+                    </div>
+                    <div className=''>
+                      <Link to='#' className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Demo</Link>
+                    </div>
+                  </div>
+                </div>
+                <h1 className='font-bold text-md uppercase text-[#6371f6]'>Project 9</h1>
+                <div className='w-full h-[auto]'>
+                  <p className='flex flex-wrap text-sm text-gray-500 text-start break-all'>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book.
+                  </p>
+                </div>
+                <section className='flex flex-col gap-3 p-2 rounded-2xl'>
+                  <h1 className='text-md font-bold text-[#6371f6]'>Project Stacks</h1>
+                  <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-3">
+                    <span className="Html py-1 px-4 h-[2rem] m-0 rounded-3xl">HTML</span>
+                    <span className="CSS py-1 px-4 h-[2rem] m-0 rounded-3xl">CSS</span>
+                    <span className="React py-1 px-4 h-[2rem] m-0 rounded-3xl">React</span>
+                    <span className="Tailwindcss py-1 px-4 h-[2rem] m-0 rounded-3xl">Tailwindcss</span>
+                  </div>
+                </section>
               </div>
-              <div className='w-full h-[2px] bg-gray-300'></div>
-              <Link to='/project'>All Projects Arrow</Link>
+              <div className='w-full h-[2px] bg-white'></div>
+              <Link to='/projects' className='px-4 py-2 bg-[#6371f6] w-[8rem] text-[14px] text-white rounded-3xl flex justify-between items-center'>
+                <span>All Projects</span>
+                <CiLocationArrow1 className='text-xl' />
+              </Link>
             </div>
-            <div className='Availability-box h-[8rem] bg-blue-500 shadow-custom rounded-2xl'>Hello</div>
+            <div className='Availability-box h-[5rem] bg-blue-500 shadow-custom rounded-2xl'>Hello</div>
           </section>
         </div>
         <footer className='bg-red-500 h-[9rem]'>Hello footer</footer>
