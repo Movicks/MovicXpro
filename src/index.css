@@ -78,6 +78,14 @@ body {
 .Home-Header-main{
   background: linear-gradient(135deg, #848FF1, #ADB6D8);
 }
+.Html, .Javascript, .CSS, .React, .Tailwindcss, .Bootstrap, .C-program, .Sanity, .Python, .Scratch{
+  border: 3px solid gray;
+  border-style: dotted;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes bubbleUp {
   0% {
     transform: translateY(0);
