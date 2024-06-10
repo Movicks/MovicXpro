@@ -198,8 +198,19 @@ body {
 }
 
 @media (max-width: 600px) {
+  .Home-box{
+    padding: 7px;
+  }
+
   .Dashboard-resDiv {
     display: none;
+  }
+  .Home-Header-main{
+    height: 14rem;
+  }
+  .glass-effect{
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .Avatar-container{
     width: 11rem;

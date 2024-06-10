@@ -49,7 +49,7 @@ function App() {
               </IconButton>
             )}
             <Typography variant="h6" noWrap component="div">
-              <div className='relative w-[7.6rem]'>
+              <div className='relative w-[7.5rem]'>
                 <h1 className='text-2xl h-[3rem] flex items-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
                   <span>M</span>ovic<span className='X-styles'>X</span>
                 </h1>
