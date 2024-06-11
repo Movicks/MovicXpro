@@ -2,11 +2,12 @@ import React from 'react';
 import LogoAI from '../../assets/Images/LogoAI.jpg'
 import { Link } from 'react-router-dom';
 import { CiHeart, CiLocationArrow1 } from 'react-icons/ci';
+import Footer from '../../components/footer/Footer';
 
 function HomePage() {
   return (
     <section className="h-full w-full flex Home hide-scrollbar">
-      <div className="Dashboard-resDiv"></div>
+      <div className="Dashboard-resDiv min-w-[15rem]"></div>
       <main className="glass-effect-3 bg-opacity-50 h-full flex-grow">
         <div className="Home-box w-full flex flex-col md:flex-row justify-between p-3 gap-3">
           <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-white w-full md:w-1/2 lg:w-[57rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
@@ -53,9 +54,9 @@ function HomePage() {
                   <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md'>Download CV</button>
                 </div>
               </div>
-              <div className='shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col mb-1 md:mb-0 p-3 gap-2'>
-                <h1 className='text-xl font-bold text-[#6371f6] underline'>Who is Movicx ?</h1>
-                <p className='text-start break-all'>
+              <div className='shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
+                <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Movicx ?</h1>
+                <p className='text-start text-gray-400'>
                   Onaiterimoh Victor Idepe, also known as Movicx, is a passionate
                   Front-end Developer specializing in bringing high quality UI/UX designs
                   to life. He excels at crafting interactive and user-centric web pages, always striving
@@ -64,9 +65,9 @@ function HomePage() {
                   <span>Happy coding!</span>
                 </p>
                 <div className='w-full h-[2px] bg-gray-300'></div>
-                <section className='flex flex-col gap-3 shadow-md p-2 rounded-2xl'>
+                <section className='flex flex-col gap-3 py-2 rounded-2xl'>
                   <h1 className='text-xl font-bold text-[#6371f6]'>My Stacks ?</h1>
-                  <div className="w-full h-[10rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-3">
+                  <div className="w-full h-[10rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
                     <span className="Html py-1 px-6 h-[2rem] m-0 rounded-3xl">HTML</span>
                     <span className="CSS py-1 px-6 h-[2rem] m-0 rounded-3xl">CSS</span>
                     <span className="Javascript py-1 px-6 h-[2rem] m-0 rounded-3xl">JavaScript</span>
@@ -86,13 +87,16 @@ function HomePage() {
             <div className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
               <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
               <div className='w-full h-[2px] bg-gray-300'></div>
-              <div className='bg-white h-[auto] Project-Card p-2 shadow-custom rounded-xl flex flex-col gap-2'>
+              <div className='bg-white h-[auto] Project-Card p-2 rounded-xl flex flex-col gap-2'>
                 <div className='relative flex items-start justify-between mb-2 h-[10rem] pointer-events-none Project-Image-container rounded-2xl overflow-hidden'>
                   <img src='https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=' alt='Project'
                     className='Project-Banner w-full h-full bg-cover rounded-2xl'
                   />
-                  <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-3'>
-                    <div className='bg-transparent w-full flex justify-end'>
+                  <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-2'>
+                    <div className='bg-transparent w-full flex justify-end gap-2 items-center'>
+                      <div className='px-3 rounded-2xl bg-white opacity-80'>
+                        <span className='Like-Counts text-black'>1k</span>
+                      </div>
                       <button className='Like-Project-btn p-1 bg-white rounded-full opacity-90'>
                         <CiHeart className='Like-Project-btn-Icon text-2xl' />
                       </button>
@@ -104,16 +108,16 @@ function HomePage() {
                 </div>
                 <h1 className='font-bold text-md uppercase text-[#6371f6]'>Project 9</h1>
                 <div className='w-full h-[auto]'>
-                  <p className='flex flex-wrap text-sm text-gray-500 text-start break-all'>
+                  <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled
                     it to make a type specimen book.
                   </p>
                 </div>
-                <section className='flex flex-col gap-3 p-2 rounded-2xl'>
-                  <h1 className='text-md font-bold text-[#6371f6]'>Project Stacks</h1>
-                  <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-3">
+                <section className='flex flex-col gap-1 rounded-2xl'>
+                  <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
+                  <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
                     <span className="Html py-1 px-4 h-[2rem] m-0 rounded-3xl">HTML</span>
                     <span className="CSS py-1 px-4 h-[2rem] m-0 rounded-3xl">CSS</span>
                     <span className="React py-1 px-4 h-[2rem] m-0 rounded-3xl">React</span>
@@ -130,7 +134,7 @@ function HomePage() {
             <div className='Availability-box h-[5rem] bg-blue-500 shadow-custom rounded-2xl'>Hello</div>
           </section>
         </div>
-        <footer className='bg-red-500 h-[9rem]'>Hello footer</footer>
+        <Footer/>
       </main>
     </section>
   );

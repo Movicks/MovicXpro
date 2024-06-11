@@ -233,6 +233,9 @@ body {
   .Hide-bubble{
     display: block;
   }
+  .Demo-Cards{
+    width: 100%;
+  }
   .Drawer-container {
     padding-top: 3.5rem;
   }
