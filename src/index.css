@@ -78,6 +78,7 @@ body {
 .Home-Header-main{
   background: linear-gradient(135deg, #848FF1, #ADB6D8);
 }
+/* STACKS STYLE */
 .Html, .Javascript, .CSS, .React, .Tailwindcss, .Bootstrap, .C-program, .Sanity, .Python, .Scratch{
   border: 3px solid gray;
   border-style: dotted;
@@ -86,7 +87,9 @@ body {
   justify-content: center;
   color: rgb(107, 107, 107);
 }
+/* ENDS */
 
+/* BUBBLE STYLES STARTS HERE */
 @keyframes bubbleUp {
   0% {
     transform: translateY(0);
@@ -156,7 +159,7 @@ body {
 .bubble-right {
   animation: bubbleRight 6s infinite ease-in-out;
 }
-
+/* BUBBLE STYLE ENDS */
 
 /* Hide scrollbar for WebKit browsers */
 .hide-scrollbar::-webkit-scrollbar {
@@ -169,8 +172,65 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+/* LOADER STYLES STARTS HERE */
+.container {
+  --uib-size: 45px;
+  --uib-color: #6371f6;
+  --uib-speed: 1.75s;
+  --uib-bg-opacity: .1;
+  height: 31.25px;
+  width: 50px;
+  transform-origin: center;
+  overflow: visible;
+}
 
-@media (min-width: 1285.60px) {
+.car {
+  stroke: var(--uib-color);
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation:
+    travel var(--uib-speed) ease-in-out infinite,
+    fade var(--uib-speed) ease-out infinite;
+  will-change: stroke-dasharray, stroke-dashoffset;
+  transition: stroke 0.5s ease;
+}
+
+.track {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--uib-color);
+  opacity: var(--uib-bg-opacity);
+}
+
+@keyframes travel {
+  0% {
+    stroke-dashoffset: 100;
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  20%,
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* LOADER ENDS HERE */
+
+@media (min-width: 960px) {
   .Dashboard-resDiv {
     width: 15rem;
     background: white;
@@ -184,19 +244,6 @@ body {
   }
 }
 
-@media (max-width: 1285.59px) {
-  .Dashboard-resDiv {
-    width: 15rem;
-    background: white;
-  }
-  .Home{
-    height: 100vh;
-  }
-  .Hide-bubble{
-    display: none;
-  }
-}
-
 @media (max-width: 959px) {
   .Dashboard-resDiv {
     display: none;
@@ -204,11 +251,21 @@ body {
   .Drawer-container {
     padding-top: 4rem;
   }
+  .Home{
+    height: 100vh;
+  }
+  .Hide-bubble{
+    display: none;
+  }
+
 }
 
 @media (max-width: 600px) {
+  .Banner-container{
+    height: 14rem;
+  }
   .Home-box{
-    padding: 7px;
+    padding: 7px 0px 0px 0px;
   }
 
   .Dashboard-resDiv {

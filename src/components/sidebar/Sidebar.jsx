@@ -74,16 +74,16 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               </div>
             </section>
             <div className='bottom-[-10px] absolute bg-black opacity-70 w-full h-[50px] flex items-center justify-center pb-2 gap-4'>
-              <Link to='#' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
+              <Link to='https://www.linkedin.com/in/onaiterimoh-victor-idepe-40b516235' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
                 <img className='w-[1.3rem] h-[1.3rem] rounded-[50%]' src='https://i.pinimg.com/564x/60/0f/0b/600f0bac329e4178179987f4d87fcfab.jpg' />
               </Link>
-              <Link to='#' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
+              <Link to='https://x.com/onaivictor?s=09' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
                 <img className='w-[1.3rem] h-[1.3rem] rounded-[50%]' src='https://i.pinimg.com/564x/7f/e9/d7/7fe9d7012076dbda78e984253ee79f49.jpg' />
               </Link>
-              <Link to='#' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
+              <Link to='mailto:victoride013@gmail.com' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
                 <img className='w-[1.3rem] h-[1.3rem] rounded-[50%]' src='https://i.pinimg.com/564x/cc/fd/22/ccfd2232408dfb656cf784eb8eb625f8.jpg' />
               </Link>
-              <Link to='#' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
+              <Link to='https://wa.link/p1m3cn' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
                 <img className='w-[1.3rem] h-[1.3rem] rounded-[50%]' src='https://i.pinimg.com/564x/ef/5c/f1/ef5cf17b90ef75bab569c639b36e52f2.jpg' />
               </Link>
               <Link to='#' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>

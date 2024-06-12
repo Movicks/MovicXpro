@@ -13,8 +13,8 @@ function ResumePage() {
             <div>Resume 1</div>
           </section>
           <section>2</section>
+          <Footer/>
         </div>
-        <Footer/>
       </main>
     </section>
   );

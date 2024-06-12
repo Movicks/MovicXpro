@@ -14,9 +14,9 @@ function HomePage() {
             <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between relative overflow-hidden">
               <div className='flex flex-col justify-between h-[8.3rem] items-start'>
                 <header className="text-3xl font-bold w-[15.8rem] text-white">Exciting projects every week</header>
-                <button className="bg-white px-[30px] py-2 rounded-full border-2 border-gray-400 opacity-90 glass-effect">
+                <Link to='/projects' className="bg-white px-[30px] py-2 rounded-full border-2 border-gray-400 opacity-90 glass-effect">
                   Projects
-                </button>
+                </Link>
               </div>
               <div className="Avatar-container absolute bottom-0 right-0 h-[14.9rem] w-[15rem] bg-red-500 rounded-tl-[100%] flex items-end justify-center pl-4">
                 <img src='https://movicks.github.io/movicx-portfolio-react/assets/DevMovicxBanner-25f4983f.png' alt='Photo' />
@@ -83,7 +83,7 @@ function HomePage() {
               </div>
             </section>
           </section>
-          <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[20rem] h-[auto] gap-3 flex flex-col justify-between">
+          <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[20rem] h-[auto] gap-3 flex flex-col justify-between px-1">
             <div className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
               <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
               <div className='w-full h-[2px] bg-gray-300'></div>
