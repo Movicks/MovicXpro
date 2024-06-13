@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import { Box, CssBaseline, AppBar, Toolbar, IconButton, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Sidebar from './components/sidebar/Sidebar';
 import { FaGithub } from 'react-icons/fa';
+import WelcomeLogoAI from './assets/Images/LogoAIW2.png';
 
-// Import views using lazy loading
+// Importing views using lazy loading
 const Home = lazy(() => import('./views/home/HomePage'));
 const About = lazy(() => import('./views/about/AboutPage'));
 const Contact = lazy(() => import('./views/contact/ContactPage'));
@@ -18,16 +19,54 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
   const isTablet = useMediaQuery('(max-width:960px)');
+  const [showWelcome, setShowWelcome] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  useEffect(() => {
+    const lastVisit = localStorage.getItem('lastVisit');
+    const today = new Date().toISOString().split('T')[0];
+
+    if (lastVisit !== today) {
+      setShowWelcome(true);
+      localStorage.setItem('lastVisit', today);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (showWelcome) {
+      const timer = setTimeout(() => {
+        setShowWelcome(false);
+      }, 9000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [showWelcome]);
+
+  if (showWelcome) {
+    return (
+      <div className="relative flex flex-col items-center justify-center h-[100vh] w-[100vw] bg-white">
+        <div className='absolute w-[18.7rem] h-[auto] bg-cover flex items-end justify-center' style={{ zIndex: 2 }}>
+          <img src={WelcomeLogoAI} alt='Photo' className='w-full' />
+          <h1 className='absolute text-gray-400 mb-1 text-2xl ml-6'>Portfolio</h1>
+        </div>
+        <div className="lds-ripple" style={{ color: 'red', zIndex: 1 }}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Router>
       <CssBaseline />
       <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden' }} className='bg-cover '>
-      <AppBar 
+        <AppBar 
           position="fixed" 
           sx={{ 
             zIndex: (theme) => theme.zIndex.drawer + 1, 

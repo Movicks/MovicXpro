@@ -34,7 +34,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href='https://youtube.com/@CodlabX9770?si=lg_5KiwnJmVzno50'>
+              <a href='https://www.tiktok.com/@dev_movicx'>
                 <FaTiktok />
               </a>
             </li>
@@ -61,7 +61,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className='sec contact_us'>
-          <h2>Contacts</h2>
+          <h2>My Contacts</h2>
           <ul className='info'>
             <li><Call className='icon text-gray-400' /><a href='tel:+2349039062234'>+2349039062234</a></li>
             <li><Mail className='icon text-gray-400' /><a href='mailto:victoride013@gmail.com'>victoride013@gmail.com</a></li>

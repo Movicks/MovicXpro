@@ -86,7 +86,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               <Link to='https://wa.link/p1m3cn' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
                 <img className='w-[1.3rem] h-[1.3rem] rounded-[50%]' src='https://i.pinimg.com/564x/ef/5c/f1/ef5cf17b90ef75bab569c639b36e52f2.jpg' />
               </Link>
-              <Link to='#' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
+              <Link to='https://www.tiktok.com/@dev_movicx' className='bg-white w-[1.7rem] h-[1.7rem] rounded-[50%] flex items-center justify-center'>
                 <img className='w-[1.3rem] h-[1.3rem] rounded-[50%]' src='https://i.pinimg.com/564x/80/2a/19/802a19bdfaec18f714d44db59b456a6e.jpg' />
               </Link>
             </div>
