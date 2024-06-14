@@ -75,7 +75,9 @@ function HomePage() {
                     <span className="Tailwindcss py-1 px-6 h-[2rem] m-0 rounded-3xl">Tailwindcss</span>
                     <span className="Bootstrap py-1 px-6 h-[2rem] m-0 rounded-3xl">Bootstrap</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Sanity.io</span>
+                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Express</span>
                     <span className="Python py-1 px-6 h-[2rem] m-0 rounded-3xl">Python</span>
+                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Git</span>
                     <span className="C-program py-1 px-6 h-[2rem] m-0 rounded-3xl">C programming</span>
                     <span className="Scratch py-1 px-6 h-[2rem] m-0 rounded-3xl">Scratch</span>
                   </div>
@@ -118,7 +120,7 @@ function HomePage() {
                 <section className='flex flex-col gap-1 rounded-2xl'>
                   <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
                   <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
-                    <span className="Html py-1 px-4 h-[2rem] m-0 rounded-3xl">HTML</span>
+                    <span className="HTML py-1 px-4 h-[2rem] m-0 rounded-3xl">HTML</span>
                     <span className="CSS py-1 px-4 h-[2rem] m-0 rounded-3xl">CSS</span>
                     <span className="React py-1 px-4 h-[2rem] m-0 rounded-3xl">React</span>
                     <span className="Tailwindcss py-1 px-4 h-[2rem] m-0 rounded-3xl">Tailwindcss</span>

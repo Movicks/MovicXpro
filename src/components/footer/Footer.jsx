@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='copyrightText text-center'>
-        <p>CopyRights &copy;2024 Portfolio. All Rights Reserved.</p>
+        <p className='px-2'>CopyRights &copy;2024 MovicXPro. All Rights Reserved.</p>
       </div>
     </footer>
   );

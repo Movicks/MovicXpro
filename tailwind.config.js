@@ -20,19 +20,19 @@ export default {
         },
         bounceVertical: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(calc(100vh - 2rem))' }, // Adjusted for bubble size
+          '50%': { transform: 'translateY(calc(100vh - 2rem))' },
         },
         bounceVerticalReverse: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(calc(-100vh + 2rem))' }, // Adjusted for bubble size
+          '50%': { transform: 'translateY(calc(-100vh + 2rem))' },
         },
         bounceHorizontal: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(calc(100vw - 2rem))' }, // Adjusted for bubble size
+          '50%': { transform: 'translateX(calc(100vw - 2rem))' },
         },
         bounceHorizontalReverse: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(calc(-100vw + 2rem))' }, // Adjusted for bubble size
+          '50%': { transform: 'translateX(calc(-100vw + 2rem))' },
         },
       },
       animation: {
