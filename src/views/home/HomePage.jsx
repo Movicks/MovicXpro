@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LogoAI from '../../assets/Images/LogoAI.jpg'
 import { Link } from 'react-router-dom';
 import { CiHeart, CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
 
 function HomePage() {
+  const [isChecked, setIsChecked] = useState(true);
+
+    const handleChange = () => {
+        setIsChecked(!isChecked);
+    };
   return (
     <section className="h-full w-full flex Home hide-scrollbar">
       <div className="Dashboard-resDiv min-w-[15rem]"></div>
@@ -76,6 +81,7 @@ function HomePage() {
                     <span className="Bootstrap py-1 px-6 h-[2rem] m-0 rounded-3xl">Bootstrap</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Sanity.io</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Express</span>
+                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">MongoDB</span>
                     <span className="Python py-1 px-6 h-[2rem] m-0 rounded-3xl">Python</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Git</span>
                     <span className="C-program py-1 px-6 h-[2rem] m-0 rounded-3xl">C programming</span>
@@ -133,7 +139,27 @@ function HomePage() {
                 <CiLocationArrow1 className='text-xl' />
               </Link>
             </div>
-            <div className='Availability-box h-[5rem] bg-blue-500 shadow-custom rounded-2xl'>Hello</div>
+            <div className='Availability-box h-[4.3rem] bg-white shadow-custom rounded-2xl overflow-hidden flex'>
+              <div className='w-[5rem] h-full bg-gray-300 rounded-2xl bg-cover overflow-hidden border-2 border-gray-400'>
+                <img src='https://movicks.github.io/movicx-portfolio-react/assets/DevMovicxBanner-25f4983f.png' alt='Photo' className='w-full h-full'/>
+              </div>
+              <div className='availability-container'>
+                  <div className='flex justify-between items-center'>
+                      <h1 className='text-primary text-[#6371f6] text-lg'>Availability</h1>
+                      <label className="switch">
+                          <input
+                              type='checkbox'
+                              checked={isChecked}
+                              onChange={handleChange}
+                          />
+                          <span className="slider round"></span>
+                      </label>
+                  </div>
+                  <div className='range-container'>
+                      <div className='range' style={{ width: isChecked ? '100%' : '0%' }}></div>
+                  </div>
+              </div>
+            </div>
           </section>
         </div>
         <Footer/>

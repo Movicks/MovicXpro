@@ -64,7 +64,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               <h1 className='text-white font-bold text-[16px]'>Onaiterimoh Victor Idepe</h1>
               <p className='text-gray-200'>Frontend Developer</p>
             </div>
-            <section className='h-[16rem] w-full bg-[rgba(10, 10, 73, 0.2)] shadow-custom rounded-2xl relative'>
+            <section className='h-[13rem] w-full bg-[rgba(10, 10, 73, 0.2)] shadow-custom rounded-2xl relative'>
               <div className='shadow-custom border-2 border-[rgba(10, 10, 73, 0.2)] h-full rounded-2xl overflow-hidden'>
                 <img
                   className='w-full h-full bg-cover'
@@ -91,7 +91,16 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               </Link>
             </div>
           </div>
-        </div>      
+        </div>
+        <div className='w-full h-[2px] bg-gray-300 mt-3'></div>
+        <section className='w-full h-[auto] flex flex-col items-start'>
+          <h1 className='text-lg text-blue-500'>Upcoming Tech Events</h1>
+          <ul className='w-full flex flex-col gap-1 items-start pb-2'>
+            <li className='text-gray-500'>CodaxLab MeetUp</li>
+            <li className='text-gray-500'>Project Review Week</li>
+            <li className='text-gray-500'>Networking Week</li>
+          </ul>
+        </section>
       </section>
     </Box>
   );
@@ -104,7 +113,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
         onClose={handleDrawerToggle}
         sx={{
           display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#dfebfa', borderRight: '3px solid #d1d5db' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'white', borderRight: '3px solid #d1d5db' },
         }}
       >
         {drawer}
@@ -114,7 +123,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'none', md: 'block', lg: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#dfebfa', borderRight: '3px solid #d1d5db' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#fff', borderRight: '3px solid #d1d5db' },
           }}
           open
         >
