@@ -324,11 +324,11 @@ body {
   border-color: #6371f6; /* Custom color */
   opacity: 1;
   border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation: lds-ripple 5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 .lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
+  animation-delay: -3s;
 }
 
 @keyframes lds-ripple {

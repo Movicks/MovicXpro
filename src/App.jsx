@@ -47,12 +47,30 @@ function App() {
 
   if (showWelcome) {
     return (
-      <div className="relative flex flex-col items-center justify-center h-[100vh] w-[100vw] bg-white">
+      <div className="relative flex flex-col items-center justify-center h-[100vh] w-[100vw] bg-white overflow-hidden">
         <div className='absolute w-[18.7rem] h-[auto] bg-cover flex items-end justify-center' style={{ zIndex: 2 }}>
-          <img src={WelcomeLogoAI} alt='Photo' className='w-full' />
-          <h1 className='absolute text-gray-400 mb-1 text-2xl ml-6'>Portfolio</h1>
+          <img src={WelcomeLogoAI} alt='Photo' className='w-full animate-breath' />
+          <h1 className='absolute text-gray-400 text-3xl ml-6'>Portfolio</h1>
         </div>
+
+        {/* Bubbles for mobile only */}
+        <div className="absolute top-0 left-1/4 transform -translate-x-1/2 animate-bounceVertical bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        <div className="absolute top-0 left-3/4 transform -translate-x-1/2 animate-bounceVerticalReverse bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        <div className="absolute bottom-0 left-1/4 transform -translate-x-1/2 animate-bounceVerticalReverse bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        <div className="absolute bottom-0 left-3/4 transform -translate-x-1/2 animate-bounceVertical bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        
+        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 animate-bounceHorizontal bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 animate-bounceHorizontalReverse bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        <div className="absolute top-1/4 left-0 transform -translate-y-1/2 animate-bounceHorizontalReverse bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+        <div className="absolute top-3/4 right-0 transform -translate-y-1/2 animate-bounceHorizontal bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
+
         <div className="lds-ripple" style={{ color: 'red', zIndex: 1 }}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
           <div></div>
           <div></div>
           <div></div>
