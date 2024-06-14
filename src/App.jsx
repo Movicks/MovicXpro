@@ -15,6 +15,8 @@ const Contact = lazy(() => import('./views/contact/ContactPage'));
 const Blog = lazy(() => import('./views/blog/BlogPost'));
 const Projects = lazy(() => import('./views/projects/ProjectsPage'));
 
+const INACTIVITY_LIMIT = 20 * 60 * 1000; // 20 minutes in milliseconds
+
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -25,14 +27,31 @@ function App() {
     setMobileOpen(!mobileOpen);
   };
 
-  useEffect(() => {
-    const lastVisit = localStorage.getItem('lastVisit');
-    const today = new Date().toISOString().split('T')[0];
+  const updateLastActivity = () => {
+    localStorage.setItem('lastActivity', new Date().getTime().toString());
+  };
 
-    if (lastVisit !== today) {
+  useEffect(() => {
+    // Update last activity on various user actions
+    window.addEventListener('mousemove', updateLastActivity);
+    window.addEventListener('keydown', updateLastActivity);
+    window.addEventListener('scroll', updateLastActivity);
+    window.addEventListener('click', updateLastActivity);
+
+    // Check last activity on load
+    const lastActivity = parseInt(localStorage.getItem('lastActivity'), 10);
+    const currentTime = new Date().getTime();
+
+    if (!lastActivity || (currentTime - lastActivity) > INACTIVITY_LIMIT) {
       setShowWelcome(true);
-      localStorage.setItem('lastVisit', today);
     }
+
+    return () => {
+      window.removeEventListener('mousemove', updateLastActivity);
+      window.removeEventListener('keydown', updateLastActivity);
+      window.removeEventListener('scroll', updateLastActivity);
+      window.removeEventListener('click', updateLastActivity);
+    };
   }, []);
 
   useEffect(() => {
@@ -65,7 +84,6 @@ function App() {
         <div className="absolute top-3/4 right-0 transform -translate-y-1/2 animate-bounceHorizontal bg-[#6371f6] rounded-full w-8 h-8 md:hidden"></div>
 
         <div className="lds-ripple" style={{ color: 'red', zIndex: 1 }}>
-          <div></div>
           <div></div>
           <div></div>
           <div></div>
