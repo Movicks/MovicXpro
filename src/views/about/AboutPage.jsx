@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../components/footer/Footer'
 import Banner from '../../components/banner/Banner';
 import './About.css'
+import { Link } from 'react-router-dom';
 
 function AboutPage() {
   return (
@@ -26,12 +27,11 @@ function AboutPage() {
                         <h2 className="heading">
                             <span className="onaiB">Anywhere</span> and <span className="onai2">anytime</span> i provide<span className="onai2"> professional</span> solutions.
                         </h2>
-                        <p>Victor known as Movicx is a Front-end Developer, 
-                            with skills in UI design and technical writing, 
-                            I enjoy building interactive and responsive webpages that solves human problems. with a background in customer service,
-                            Tech training & support, content writing, Project management etc.
-                            I am able to add value and build a dynamic career by developing
-                            scalable tech solutions that address specific user needs. I am always ready learn and improve the more to be a world-class developer in tech space.
+                        <p>Onaiterimoh Victor Idepe, known as Movicx, is a Front-end Developer with expertises in bring UI designs to life,
+                          as well as junior-level full stack experience. I enjoy building interactive and responsive webpages that solve human problems.
+                          With a background in customer service, tech training & support, content writing, and project management,
+                          I am well-equipped to add value and build a dynamic career by developing scalable tech solutions that addresses user needs.
+                          I am always ready to learn and improve, aiming to become a world-class developer in the tech space.
                         </p>
                         <p>
                             I can build and maintain websites, implementing responsive designs, 
@@ -41,7 +41,7 @@ function AboutPage() {
                             Happy coding....     
                         </p>
                         <div className='onai5'>
-                            <a href="myCV/Professional Resume - 01.pdf" className="btn">See my CV</a>
+                            <Link to='/resume' className="btn">See Resume</Link>
                         </div>
                     </div>
                 </div>
