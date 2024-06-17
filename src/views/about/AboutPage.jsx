@@ -3,6 +3,7 @@ import Footer from '../../components/footer/Footer'
 import Banner from '../../components/banner/Banner';
 import './About.css'
 import { Link } from 'react-router-dom';
+import { AdsClick, BusinessCenterOutlined, CodeOffOutlined } from '@mui/icons-material';
 
 function AboutPage() {
   return (
@@ -42,11 +43,35 @@ function AboutPage() {
                         </p>
                         <div className='onai5'>
                             <Link to='/resume' className="btn">See Resume</Link>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+          </section>
+          <section id='Services'>
+            <h1 className="heading"><span>Services</span></h1>
+            <p className="text-center pb-3 text-gray-400">What I do for my clients</p>
+            <div className='flex justify-center align-center'>
+              <div className='md:flex justify-center mb-3'>
+                  <div className='client-mark flex'>
+                    <div className='Client-services bg-white shadow-custom p-3 max-w-[8rem] justify-center align-center text-center'>
+                    {/* your icons here */}
+                        <CodeOffOutlined className='Service-icon text-[#6371F6]'/>
+                        <p className=''>Web Development</p>
+                    </div>
+                    <div className='Client-services bg-white shadow-custom mx-1 max-w-[8rem] pb-5 pt-3 px-7 justify-center align-center text-center'>
+                        <BusinessCenterOutlined className='Service-icon text-[#6371F6]'/>
+                        <p>Digital Marketing</p>
+                    </div>
+                    <div className='Client-services bg-white shadow-custom p-3 max-w-[8rem] justify-center align-center text-center'>
+                        <AdsClick className='Service-icon text-[#6371F6]'/>
+                        <p>Social Media Management</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
           <Footer/>
         </div>
       </main>

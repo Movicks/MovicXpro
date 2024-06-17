@@ -59,7 +59,7 @@ function App() {
     if (showWelcome) {
       const timer = setTimeout(() => {
         setShowWelcome(false);
-      }, 9000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }

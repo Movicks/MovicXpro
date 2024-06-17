@@ -15,7 +15,7 @@ const jobExperience = [
 
 const Timeline = () => {
   return (
-    <div className="timeline-container my-10 p-5 lg:grid lg:grid-cols-2 lg:gap-8">
+    <div className="timeline-container my-5 px-5 lg:grid lg:grid-cols-2 lg:gap-9">
       <div>
         <h2 className="text-xl font-bold mb-5">Education</h2>
         {education.map((item) => (
