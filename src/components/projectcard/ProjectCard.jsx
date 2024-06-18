@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CiHeart } from 'react-icons/ci';
+import { FaGithub } from 'react-icons/fa';
 
 // Mock API fetch function
 const fetchProjects = async () => {
-  // Replace this with your actual API call
   return [
-    { id: 1, name: 'Project 1', description: 'Lorem Ipsum...', likeCount: 100, stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 2, name: 'Project 2', description: 'Lorem Ipsum...', likeCount: 200, stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 3, name: 'Project 3', description: 'Lorem Ipsum...', likeCount: 300, stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 4, name: 'Project 4', description: 'Lorem Ipsum...', likeCount: 400, stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 5, name: 'Project 5', description: 'Lorem Ipsum...', likeCount: 500, stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 6, name: 'Project 6', description: 'Lorem Ipsum...', likeCount: 600, stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    // Add more projects here
+    { id: 1, name: 'Project 1', Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=', demo: '', description: 'Lorem Ipsum...', likeCount: 9, link: 'https://github.com/Movicks', stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
+    { id: 2, name: 'Project 2', Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=', demo: '', description: 'Lorem Ipsum...', likeCount: 2, link: 'https://github.com/Movicks', stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
+    { id: 3, name: 'Child Guard', Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=', demo: '#', description: 'Child Guard is an innovative Chrome extension tailored to empower parents and guardians by providing robust control over their childrens internet activities. With the increasing digital landscape, ensuring a safe online environment for young users is crucial. This extension serves as a vigilant guardian, enabling users to proactively manage and restrict access to specific URLs or hostnames.', likeCount: 3, link: 'https://github.com/code50/97033705/tree/main/project', stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
   ];
 };
 
@@ -63,7 +58,7 @@ function ProjectCard() {
           <div className='bg-white h-auto Project-Card p-2 shadow-custom rounded-xl flex flex-col gap-2 border-2'>
             <div className='relative flex items-center justify-center mb-2 h-[10rem] Project-Image-container rounded-2xl overflow-hidden'>
               <img 
-                src='https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=' 
+                src={project.Image} 
                 alt='Project'
                 className='Project-Banner w-full h-full bg-cover rounded-2xl hover:animate-breath'
               />
@@ -72,15 +67,15 @@ function ProjectCard() {
                   <div className='px-3 rounded-2xl bg-white opacity-80'>
                     <span className='Like-Counts text-black'>{formatCount(project.likeCount)}</span>
                   </div>
-                  <button 
+                  <Link to={project.link}
                     className='Like-Project-btn p-1 bg-white rounded-full opacity-90' 
                     onClick={() => handleLike(index)}
                   >
-                    <CiHeart className={`Like-Project-btn-Icon text-2xl ${liked[index] ? 'text-[#4759fc]' : 'text-black'}`} />
-                  </button>
+                    <FaGithub className={`Like-Project-btn-Icon text-2xl ${liked[index] ? 'text-[#4759fc]' : 'text-black'}`} />
+                  </Link>
                 </div>
                 <div className=''>
-                  <Link to='#' className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Demo</Link>
+                  <Link to={project.demo} className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Demo</Link>
                 </div>
               </div>
             </div>

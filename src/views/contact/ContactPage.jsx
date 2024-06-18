@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../../components/footer/Footer';
 import Banner from '../../components/banner/Banner';
 import { TbPhoneCalling } from 'react-icons/tb';
+import { Link } from 'react-router-dom';
 
 function ContactPage() {
   return (
@@ -26,7 +27,7 @@ function ContactPage() {
                   <div className='flex gap-2 items-center'>
                     <TbPhoneCalling className='text-4xl text-[#6371F6]'/>
                     <div>
-                      <h1 className='text-sm text-gray-400'>+2349039062234</h1>
+                      <Link to='tel:+2349039062234' className='text-sm text-gray-400'>+2349039062234</Link>
                       <h3 className='text-sm text-[#6371F6]'>victoride013@gmail.com</h3>
                     </div>
                   </div>
@@ -50,23 +51,23 @@ function ContactPage() {
               </div>
               <form className='w-full max-w-[60rem] h-[auto] flex flex-col items-center gap-5 mt-5 shadow-custom px-3 pt-10 pb-4 rounded-xl'>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[11rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
                     <input type='text' placeholder='Full name' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
-                  <div className='flex-1 w-[11rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
                     <input type='email' placeholder='Email address' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
                 </div>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[11rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
                     <input type='phone' placeholder='Phone' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
-                  <div className='flex-1 w-[11rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
                     <input type='title' placeholder='Title' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
                 </div>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[11rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
                     <textarea type='textarea' placeholder='Message' className='w-full bg-[#d7dbffd0] h-[7rem] p-2 border-none flex flex-wrap resize-none focus:outline-none rounded'/>
                   </div>
                 </div>

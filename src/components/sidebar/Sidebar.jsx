@@ -65,7 +65,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               <h1 className='text-white font-bold text-[16px]'>Onaiterimoh Victor Idepe</h1>
               <p className='text-gray-200'>Frontend Developer</p>
             </div>
-            <section className='h-[13rem] w-full bg-[rgba(10, 10, 73, 0.2)] shadow-custom rounded-2xl relative'>
+            <section className='h-[14rem] w-full bg-[rgba(10, 10, 73, 0.2)] shadow-custom rounded-2xl relative'>
               <div className='shadow-custom border-2 border-[rgba(10, 10, 73, 0.2)] h-full rounded-2xl overflow-hidden'>
                 <img
                   className='w-full h-full bg-cover'
@@ -97,9 +97,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
         <section className='w-full h-[auto] flex flex-col items-start'>
           <h1 className='text-lg text-blue-500'>Upcoming Tech Events</h1>
           <ul className='w-full flex flex-col gap-1 items-start pb-2'>
-            <li className='text-gray-500'>CodaxLab MeetUp</li>
-            <li className='text-gray-500'>Project Review Week</li>
-            <li className='text-gray-500'>Networking Week</li>
+            <li className='text-gray-500'>No Tech Event Available</li>
           </ul>
         </section>
       </section>
