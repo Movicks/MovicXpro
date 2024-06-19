@@ -51,23 +51,23 @@ function ContactPage() {
               </div>
               <form className='w-full max-w-[60rem] h-[auto] flex flex-col items-center gap-5 mt-5 shadow-custom px-3 pt-10 pb-4 rounded-xl'>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
                     <input type='text' placeholder='Full name' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
                     <input type='email' placeholder='Email address' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
                 </div>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
                     <input type='phone' placeholder='Phone' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[9rem] lg:w-[18rem]'>
                     <input type='title' placeholder='Title' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
                   </div>
                 </div>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
                     <textarea type='textarea' placeholder='Message' className='w-full bg-[#d7dbffd0] h-[7rem] p-2 border-none flex flex-wrap resize-none focus:outline-none rounded'/>
                   </div>
                 </div>
