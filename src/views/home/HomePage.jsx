@@ -48,8 +48,8 @@ function HomePage() {
                 <div className="bubble bubble-right w-5 h-5 mt-5 Hide-bubble"></div>
               </div>
             </div>
-            <section className='w-full flex flex-col-reverse md:flex-row justify-between gap-3'>
-              <div className='relative bg-gray-300 w-full md:w-1/2 lg:w-[20rem] h-[25rem] shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
+            <section className='Stacks-Container w-full flex flex-col-reverse md:flex-row justify-between gap-3'>
+              <div className='Stacks-boxs relative bg-gray-300 w-full md:w-1/2 lg:w-[20rem] h-[25rem] shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
                 <div className='w-full h-full bg-red-200 flex items-center justify-center'>
                   <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
                 </div>
@@ -59,7 +59,7 @@ function HomePage() {
                   <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md'>Download CV</button>
                 </div>
               </div>
-              <div className='shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
+              <div className='Stacks-boxs shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
                 <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Movicx ?</h1>
                 <p className='text-start text-gray-400'>
                   Onaiterimoh Victor Idepe, also known as Movicx, is a passionate

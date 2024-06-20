@@ -60,7 +60,7 @@ function AboutPage() {
                         <CodeOffOutlined className='Service-icon text-[#6371F6]'/>
                         <p className=''>Web <br/> Development</p>
                     </div>
-                    <div className='Client-services bg-white shadow-custom mx-1 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] pb-5 pt-3 px-7 justify-center align-center text-center'>
+                    <div className='Client-services bg-white shadow-custom mx-1 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] pb-5 pt-3 px-4 justify-center align-center text-center'>
                         <BusinessCenterOutlined className='Service-icon text-[#6371F6]'/>
                         <p>Digital Marketing</p>
                     </div>

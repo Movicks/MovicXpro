@@ -18,16 +18,20 @@ function ContactPage() {
               <div className='w-full lg:w-[35rem] h-full lg:h-auto sm:h-[20rem] lg:max-h-[25rem] px-10 py-5 lg:px-20 lg:py-20 flex flex-col justify-between'>
                 <div>
                   <h1 className='text-xl font-bold pb-2'>Get In Touch</h1>
-                  <p className='text-gray-400'>Don not be shy, contact me.</p>
+                  <p className='text-gray-400'>Don't be shy, contact me.</p>
                   <p className='text-gray-400'>Let us bring your dreams to reality</p>
                 </div>
                 <div className='w-full h-[2px] bg-gray-300 my-3'></div>
                 <div>
-                  <h1 className='text-[13px] font-bold pb-3'>Blck Y, Room 4. Nigerian Armed Forces Ressettlement Center Oshodi Lagos.</h1>
+                  <h1 className='text-[13px] font-bold pb-3'>
+                    Blck Y, Room 4. Nigerian Armed Forces Resettlement Center Oshodi Lagos.
+                  </h1>
                   <div className='flex gap-2 items-center'>
-                    <TbPhoneCalling className='text-4xl text-[#6371F6]'/>
+                    <TbPhoneCalling className='text-4xl text-[#6371F6]' />
                     <div>
-                      <Link to='tel:+2349039062234' className='text-sm text-gray-400'>+2349039062234</Link>
+                      <Link to='tel:+2349039062234' className='text-sm text-gray-400'>
+                        +2349039062234
+                      </Link>
                       <h3 className='text-sm text-[#6371F6]'>victoride013@gmail.com</h3>
                     </div>
                   </div>
@@ -36,7 +40,7 @@ function ContactPage() {
               <div className='bg-[#6371F6] w-full lg:w-[25rem] h-full lg:h-auto sm:h-[20rem] lg:max-h-[25rem]'></div>
             </div>
           </section>
-          <section className='w-full my-5 flex items-center justify-center px-2 flex items-center'>
+          <section className='w-full my-5 flex items-center justify-center px-2'>
             <div className='w-full max-w-[60rem] h-[auto] flex items-center gap-2'>
               <div className='w-full h-[2px] bg-gray-300'></div>
               <span className='text-gray-400'>OR</span>
@@ -51,24 +55,24 @@ function ContactPage() {
               </div>
               <form className='w-full max-w-[60rem] h-[auto] flex flex-col items-center gap-5 mt-5 shadow-custom px-3 pt-10 pb-4 rounded-xl'>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
-                    <input type='text' placeholder='Full name' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
+                    <input type='text' placeholder='Full name' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' aria-label='Full name' />
                   </div>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
-                    <input type='email' placeholder='Email address' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
-                  </div>
-                </div>
-                <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
-                    <input type='phone' placeholder='Phone' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
-                  </div>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
-                    <input type='title' placeholder='Title' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' />
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
+                    <input type='email' placeholder='Email address' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' aria-label='Email address' />
                   </div>
                 </div>
                 <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
-                  <div className='flex-1 w-[10.5rem] lg:w-[18rem]'>
-                    <textarea type='textarea' placeholder='Message' className='w-full bg-[#d7dbffd0] h-[7rem] p-2 border-none flex flex-wrap resize-none focus:outline-none rounded'/>
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
+                    <input type='phone' placeholder='Phone' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' aria-label='Phone' />
+                  </div>
+                  <div className='flex-1 w-[9rem] lg:w-[18rem]'>
+                    <input type='text' placeholder='Title' className='w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none' aria-label='Title' />
+                  </div>
+                </div>
+                <div className='flex lg:flex-row justify-center gap-3 w-full lg:gap-9'>
+                  <div className='flex-1 w-[9.5rem] lg:w-[18rem]'>
+                    <textarea placeholder='Message' className='w-full bg-[#d7dbffd0] h-[7rem] p-2 border-none flex flex-wrap resize-none focus:outline-none rounded' aria-label='Message'></textarea>
                   </div>
                 </div>
                 <button className='bg-[#6371f6] px-20 py-3 rounded text-white'>Send Message</button>
