@@ -1,44 +1,21 @@
-import React, { useState, useEffect } from 'react';
+// src/ProjectCard.js
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
-
-// Mock API fetch function
-const fetchProjects = async () => {
-  return [
-    { id: 1, name: 'Project 5', Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=', demo: '', description: 'Lorem Ipsum...', likeCount: 9, link: 'https://github.com/Movicks', stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 2, name: 'Project 2', Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=', demo: '', description: 'Lorem Ipsum...', likeCount: 2, link: 'https://github.com/Movicks', stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-    { id: 3, name: 'Child Guard', Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=', demo: '#', description: 'Child Guard is an innovative Chrome extension tailored to empower parents and guardians by providing robust control over their childrens internet activities. With the increasing digital landscape, ensuring a safe online environment for young users is crucial. This extension serves as a vigilant guardian, enabling users to proactively manage and restrict access to specific URLs or hostnames.', likeCount: 3, link: 'https://github.com/code50/97033705/tree/main/project', stacks: ['HTML', 'CSS', 'React', 'Tailwindcss'] },
-  ];
-};
+import ProjectCardItems from './ProjectData'; // Importing the data from ProjectData.js
 
 function ProjectCard() {
-  const [projects, setProjects] = useState([]);
   const [liked, setLiked] = useState([]);
 
-  useEffect(() => {
-    const getProjects = async () => {
-      const projects = await fetchProjects();
-      setProjects(projects);
-      setLiked(Array(projects.length).fill(false));
-    };
-
-    getProjects();
-  }, []);
+  // Initialize liked state based on the length of ProjectCardItems
+  useState(() => {
+    setLiked(Array(ProjectCardItems.length).fill(false));
+  });
 
   const handleLike = (index) => {
     const newLiked = [...liked];
-    const newProjects = [...projects];
-
-    if (newLiked[index]) {
-      newProjects[index].likeCount -= 1;
-    } else {
-      newProjects[index].likeCount += 1;
-    }
-
     newLiked[index] = !newLiked[index];
-
     setLiked(newLiked);
-    setProjects(newProjects);
   };
 
   const formatCount = (count) => {
@@ -53,9 +30,9 @@ function ProjectCard() {
 
   return (
     <ul className='w-full px-2 py-2 flex flex-wrap gap-2'>
-      {projects.map((project, index) => (
-        <li key={project.id} className='Demo-Cards w-[19.3rem] h-auto'>
-          <div className='bg-white h-auto Project-Card p-2 shadow-custom rounded-xl flex flex-col gap-2 border-2'>
+      {ProjectCardItems.slice(0).reverse().map((project, index) => ( // Reverse order here
+        <li key={project.id} className='Demo-Cards w-[19.3rem] h-[auto]'>
+          <div className='bg-white h-auto Project-Card p-2 shadow-custom h-[28rem] rounded-xl flex flex-col gap-2 border-2'>
             <div className='relative flex items-center justify-center mb-2 h-[10rem] Project-Image-container rounded-2xl overflow-hidden'>
               <img 
                 src={project.Image} 
@@ -80,7 +57,7 @@ function ProjectCard() {
               </div>
             </div>
             <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
-            <div className='w-full h-auto'>
+            <div className='w-full h-[10rem] overflow-y-auto'>
               <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                 {project.description}
               </p>
