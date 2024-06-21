@@ -50,7 +50,7 @@ const Footer = () => {
           <h2>Communities</h2>
           <ul>
             <li><Link to='#'>Frontend Mentor</Link></li>
-            <li><Link to='#'>CodaxLab</Link></li>
+            <li><Link to='https://chat.whatsapp.com/J62SP1n3dJWKHfVOwdMwcz'>CodaxLab</Link></li>
           </ul>
         </div>
         <div className='sec quickLinks'>
@@ -64,8 +64,8 @@ const Footer = () => {
         <div className='sec contact_us'>
           <h2>My Contacts</h2>
           <ul className='info'>
-            <li><Call className='icon text-gray-400' /><Link href='tel:+2349039062234'>+2349039062234</Link></li>
-            <li><Mail className='icon text-gray-400' /><Link href='mailto:victoride013@gmail.com'>victoride013@gmail.com</Link></li>
+            <li><Call className='icon text-gray-400' /><Link to='tel:+2349039062234'>+2349039062234</Link></li>
+            <li><Mail className='icon text-gray-400' /><Link to='mailto:victoride013@gmail.com'>victoride013@gmail.com</Link></li>
           </ul>
         </div>
       </div>

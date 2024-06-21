@@ -7,6 +7,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Sidebar from './components/sidebar/Sidebar';
 import { FaGithub } from 'react-icons/fa';
 import WelcomeLogoAI from './assets/Images/LogoAIW2.png';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 // Importing views using lazy loading
 const Home = lazy(() => import('./views/home/HomePage'));
@@ -101,6 +104,8 @@ function App() {
 
   return (
     <Router>
+      <ToastContainer />
+
       <CssBaseline />
       <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden' }} className='bg-cover '>
         <AppBar 
