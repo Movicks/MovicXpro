@@ -56,7 +56,7 @@ function AboutPage() {
               <div className='md:flex justify-center mb-3'>
                   <div className='client-mark flex'>
                     <div className='Client-services bg-white shadow-custom p-3 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] justify-center align-center text-center'>
-                    {/* your icons here */}
+                    {/* icons here */}
                         <CodeOffOutlined className='Service-icon text-[#6371F6]'/>
                         <p className=''>Web <br/> Development</p>
                     </div>

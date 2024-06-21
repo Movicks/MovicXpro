@@ -13,13 +13,13 @@ const ProjectData = [
     },
     {
       id: 2,
-      name: 'Project 2',
+      name: 'E-commerce Landing Page',
       Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
-      demo: '',
-      description: 'Lorem Ipsum...',
+      demo: 'https://movicks.github.io/E-commerce-landingPage/',
+      description: 'This project is just for testing what i can do at the point i started my tech career as a newbie.',
       likeCount: 2,
-      link: 'https://github.com/Movicks',
-      stacks: ['HTML', 'CSS', 'React', 'Tailwindcss']
+      link: 'https://github.com/Movicks/E-commerce-landingPage',
+      stacks: ['HTML', 'CSS', 'Javascript']
     },
     {
       id: 3,
