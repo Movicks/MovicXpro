@@ -20,9 +20,19 @@ const ProjectData = [
       likeCount: 2,
       link: 'https://github.com/Movicks/E-commerce-landingPage',
       stacks: ['HTML', 'CSS', 'Javascript']
-    },
+  },
+  {
+    id: 3,
+    name: 'Dybit Invest',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'https://dybit-invest.netlify.app/',
+    description: 'This project is an unfinished full-stack investment app for a client due to lack of financial support.',
+    likeCount: 5,
+    link: 'https://github.com/Movicks/Dybit-React-NodeJs',
+    stacks: ['HTML', 'CSS', 'React', 'Tailwindcss', 'Bootstrap', 'NodeJs', 'MongoDB']
+},
     {
-      id: 3,
+      id: 4,
       name: 'Child Guard',
       Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
       demo: '#',
@@ -30,7 +40,17 @@ const ProjectData = [
       likeCount: 3,
       link: 'https://github.com/code50/97033705/tree/main/project',
       stacks: ['HTML', 'CSS', 'Javascript']
-    },
+  },
+  {
+    id: 5,
+    name: 'Miatos PWA',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'HTTPS://pwa-frontend.pages.dev/',
+    description: 'This is an ongoing PWA project for the Miatos Solutions',
+    likeCount: 10,
+    link: 'https://github.com/Miatos-Solutions/PWA-frontend',
+    stacks: ['HTML', 'CSS', 'React', 'Tailwindcss']
+  },
   ];
   
   export default ProjectData;

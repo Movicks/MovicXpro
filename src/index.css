@@ -90,7 +90,7 @@ body {
   background: linear-gradient(135deg, #848FF1, #ADB6D8);
 }
 /* STACKS STYLE */
-.Html, .HTML, .Javascript, .CSS, .React, .Tailwindcss, .Bootstrap, .C-program, .Sanity, .Python, .Scratch{
+.Html, .HTML, .Javascript, .CSS, .React, .Tailwindcss, .Bootstrap, .C-program, .Sanity, .Python, .Scratch, .NodeJs, .MongoDB{
   border: 3px solid gray;
   border-style: dotted;
   display: flex;
