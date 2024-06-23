@@ -52,7 +52,7 @@ function ProjectCard() {
                   </Link>
                 </div>
                 <div className=''>
-                  <Link to={project.demo} className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Demo</Link>
+                  <Link to={project.demo} className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Live Preview</Link>
                 </div>
               </div>
             </div>

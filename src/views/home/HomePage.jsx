@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import LogoAI from '../../assets/Images/LogoAI.jpg'
 import { Link } from 'react-router-dom';
-import { CiHeart, CiLocationArrow1 } from 'react-icons/ci';
+import { CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
+import ProjectData from '../../components/projectcard/ProjectData';
+import { FaGithub } from 'react-icons/fa';
 
 function HomePage() {
+  const lastItem = ProjectData.slice(-1);
   const [isChecked, setIsChecked] = useState(true);
 
     const handleChange = () => {
@@ -80,7 +83,7 @@ function HomePage() {
                     <span className="Tailwindcss py-1 px-6 h-[2rem] m-0 rounded-3xl">Tailwindcss</span>
                     <span className="Bootstrap py-1 px-6 h-[2rem] m-0 rounded-3xl">Bootstrap</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Sanity.io</span>
-                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Express</span>
+                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">NodeJs</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">MongoDB</span>
                     <span className="Python py-1 px-6 h-[2rem] m-0 rounded-3xl">Python</span>
                     <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Git</span>
@@ -92,53 +95,51 @@ function HomePage() {
             </section>
           </section>
           <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[20rem] h-[auto] gap-3 flex flex-col justify-between px-1">
-            <div className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
-              <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
-              <div className='w-full h-[2px] bg-gray-300'></div>
-              <div className='bg-white h-[auto] Project-Card p-2 rounded-xl flex flex-col gap-2'>
-                <div className='relative flex items-start justify-between mb-2 h-[10rem] pointer-events-none Project-Image-container rounded-2xl overflow-hidden'>
-                  <img src='https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=' alt='Project'
-                    className='Project-Banner w-full h-full bg-cover rounded-2xl'
-                  />
-                  <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-2'>
-                    <div className='bg-transparent w-full flex justify-end gap-2 items-center'>
-                      <div className='px-3 rounded-2xl bg-white opacity-80'>
-                        <span className='Like-Counts text-black'>1k</span>
+            {lastItem.map((project) => (
+              <div key={project.id} className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
+                <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
+                <div className='w-full h-[2px] bg-gray-300'></div>
+                <div className='bg-white h-[auto] Project-Card p-2 rounded-xl flex flex-col gap-2'>
+                  <div className='relative flex items-start justify-between mb-2 h-[10rem] pointer-events-none Project-Image-container rounded-2xl overflow-hidden'>
+                    <img src={project.Image} alt='Project'
+                      className='Project-Banner w-full h-full bg-cover rounded-2xl'
+                    />
+                    <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-2'>
+                      <div className='bg-transparent w-full flex justify-end gap-2 items-center'>
+                        <div className='px-3 rounded-2xl bg-white opacity-80'>
+                          <span className='Like-Counts text-black'>{project.likeCount}</span>
+                        </div>
+                        <Link to={project.link} className='Like-Project-btn p-1 bg-white rounded-full opacity-90'>
+                          <FaGithub className='Like-Project-btn-Icon text-2xl' />
+                        </Link>
                       </div>
-                      <button className='Like-Project-btn p-1 bg-white rounded-full opacity-90'>
-                        <CiHeart className='Like-Project-btn-Icon text-2xl' />
-                      </button>
-                    </div>
-                    <div className=''>
-                      <Link to='#' className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Demo</Link>
+                      <div className=''>
+                        <Link to={project.demo} className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Live Preview</Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <h1 className='font-bold text-md uppercase text-[#6371f6]'>Project 9</h1>
-                <div className='w-full h-[auto]'>
-                  <p className='flex flex-wrap text-sm text-gray-400 text-start'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book.
-                  </p>
-                </div>
-                <section className='flex flex-col gap-1 rounded-2xl'>
-                  <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
-                  <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
-                    <span className="HTML py-1 px-4 h-[2rem] m-0 rounded-3xl">HTML</span>
-                    <span className="CSS py-1 px-4 h-[2rem] m-0 rounded-3xl">CSS</span>
-                    <span className="React py-1 px-4 h-[2rem] m-0 rounded-3xl">React</span>
-                    <span className="Tailwindcss py-1 px-4 h-[2rem] m-0 rounded-3xl">Tailwindcss</span>
+                  <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
+                  <div className='w-full h-[10rem] overflow-y-auto'>
+                    <p className='flex flex-wrap text-sm text-gray-400 text-start'>
+                      {project.description}
+                    </p>
                   </div>
-                </section>
+                  <section className='flex flex-col gap-1 rounded-2xl'>
+                    <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
+                    <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
+                      {project.stacks.map((stack, stackIndex) => (
+                          <span key={stackIndex} className={`${stack} py-1 px-4 h-[2rem] m-0 rounded-3xl`}>{stack}</span>
+                      ))}
+                    </div>
+                  </section>
+                </div>
+                <div className='w-full h-[2px] bg-white'></div>
+                <Link to='/projects' className='px-4 py-2 bg-[#6371f6] w-[8rem] text-[14px] text-white rounded-3xl flex justify-between items-center'>
+                  <span>All Projects</span>
+                  <CiLocationArrow1 className='text-xl' />
+                </Link>
               </div>
-              <div className='w-full h-[2px] bg-white'></div>
-              <Link to='/projects' className='px-4 py-2 bg-[#6371f6] w-[8rem] text-[14px] text-white rounded-3xl flex justify-between items-center'>
-                <span>All Projects</span>
-                <CiLocationArrow1 className='text-xl' />
-              </Link>
-            </div>
+            ))}
             <div className='Availability-box h-[4.3rem] bg-white shadow-custom rounded-2xl overflow-hidden flex'>
               <div className='w-[5rem] h-full bg-gray-300 rounded-2xl bg-cover overflow-hidden border-2 border-gray-400'>
                 <img src='https://movicks.github.io/movicx-portfolio-react/assets/DevMovicxBanner-25f4983f.png' alt='Photo' className='w-full h-full'/>
