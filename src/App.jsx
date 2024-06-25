@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { lazy, Suspense, useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Box, CssBaseline, AppBar, Toolbar, IconButton, Typography } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Sidebar from './components/sidebar/Sidebar';
 import { FaGithub } from 'react-icons/fa';
-import WelcomeLogoAI from './assets/Images/LogoAIW2.png';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Sidebar from './components/sidebar/Sidebar';
+import WelcomeLogoAI from './assets/Images/LogoAIW2.png';
 
 // Importing views using lazy loading
 const Home = lazy(() => import('./views/home/HomePage'));
@@ -21,7 +21,7 @@ const ResumePage = lazy(() => import('./views/resume/ResumePage'));
 
 const INACTIVITY_LIMIT = 20 * 60 * 1000; // 20 minutes in milliseconds
 
-function App() {
+const App = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width:600px)');
   const isTablet = useMediaQuery('(max-width:960px)');
@@ -37,10 +37,8 @@ function App() {
 
   useEffect(() => {
     // Update last activity on various user actions
-    window.addEventListener('mousemove', updateLastActivity);
-    window.addEventListener('keydown', updateLastActivity);
-    window.addEventListener('scroll', updateLastActivity);
-    window.addEventListener('click', updateLastActivity);
+    const events = ['mousemove', 'keydown', 'scroll', 'click'];
+    events.forEach(event => window.addEventListener(event, updateLastActivity));
 
     // Check last activity on load
     const lastActivity = parseInt(localStorage.getItem('lastActivity'), 10);
@@ -51,10 +49,7 @@ function App() {
     }
 
     return () => {
-      window.removeEventListener('mousemove', updateLastActivity);
-      window.removeEventListener('keydown', updateLastActivity);
-      window.removeEventListener('scroll', updateLastActivity);
-      window.removeEventListener('click', updateLastActivity);
+      events.forEach(event => window.removeEventListener(event, updateLastActivity));
     };
   }, []);
 

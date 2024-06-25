@@ -45,7 +45,7 @@ const ProjectData = [
     id: 5,
     name: 'Miatos PWA',
     Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
-    demo: 'HTTPS://pwa-frontend.pages.dev/',
+    demo: 'https://pwa-frontend.pages.dev/',
     description: 'This is an ongoing PWA project for the Miatos Solutions',
     likeCount: 10,
     link: 'https://github.com/Miatos-Solutions/PWA-frontend',
