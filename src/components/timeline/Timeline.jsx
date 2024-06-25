@@ -8,7 +8,7 @@ const education = [
 ];
 
 const jobExperience = [
-  { id: 1, year: '2024 - Present', title: 'Software Engineer', company: 'Miatos Solutions' },
+  { id: 1, year: '2024 - Present', title: 'Frontend Developer', company: 'Miatos Solutions' },
   { id: 2, year: '2023 - Three Months', title: 'Junior Software Engineering Intern', company: 'ProjectStack (Remote)' },
   { id: 3, year: '2023 - Three Months', title: 'Frontend Development Intern', company: 'Zuri CDT (Remote)' },
 ];
