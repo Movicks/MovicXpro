@@ -97,7 +97,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
         <section className='w-full h-[auto] flex flex-col items-start'>
           <h1 className='text-lg text-blue-500'>Upcoming Tech Events</h1>
           <ul className='w-full flex flex-col gap-1 items-start pb-2'>
-            <li className='text-gray-500'>No Tech Event Available</li>
+            <li className='text-gray-500'>No tech event available</li>
           </ul>
         </section>
       </section>
