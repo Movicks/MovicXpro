@@ -1,6 +1,16 @@
 // src/ProjectData.js
 
 const ProjectData = [
+  {
+    id: 0,
+    name: 'Loan App',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'https://movicks.github.io/LoanCalculating-App/',
+    description: 'LoanApp.org is a simple web application designed to help users calculate loan payments. The app provides an easy-to-use interface where users can input the loan amount, interest rate, and the number of years to repay the loan. It then calculates the monthly payment, total payment, and total interest.',
+    likeCount: 9,
+    link: 'https://github.com/Movicks/LoanCalculating-App',
+    stacks: ['HTML', 'CSS', 'Javascript']
+  },
     {
       id: 1,
       name: 'ATM Card Validator',
@@ -45,7 +55,7 @@ const ProjectData = [
     id: 5,
     name: 'Miatos PWA',
     Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
-    demo: 'https://pwa-frontend.pages.dev/',
+    demo: 'https://pwa-frontend.pages.dev',
     description: 'This is an ongoing PWA project for the Miatos Solutions',
     likeCount: 10,
     link: 'https://github.com/Miatos-Solutions/PWA-frontend',

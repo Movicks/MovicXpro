@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
-import ProjectCardItems from './ProjectData'; // Importing the data from ProjectData.js
+import ProjectCardItems from './ProjectData';
 
 function ProjectCard() {
   const [liked, setLiked] = useState([]);
@@ -30,7 +30,7 @@ function ProjectCard() {
 
   return (
     <ul className='w-full px-2 py-2 flex flex-wrap gap-2'>
-      {ProjectCardItems.slice(0).reverse().map((project, index) => ( // Reverse order here
+      {ProjectCardItems.slice(0).reverse().map((project, index) => ( 
         <li key={project.id} className='Demo-Cards w-[19.3rem] h-[auto]'>
           <div className='bg-white h-auto Project-Card p-2 shadow-custom h-[28rem] rounded-xl flex flex-col gap-2 border-2'>
             <div className='relative flex items-center justify-center mb-2 h-[10rem] Project-Image-container rounded-2xl overflow-hidden'>
@@ -57,7 +57,7 @@ function ProjectCard() {
               </div>
             </div>
             <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
-            <div className='w-full h-[10rem] overflow-y-auto'>
+            <div className='w-full max-h-[10rem] lg:h-[7rem] overflow-y-auto'>
               <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                 {project.description}
               </p>

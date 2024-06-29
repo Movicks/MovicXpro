@@ -104,22 +104,9 @@ function HomePage() {
                     <img src={project.Image} alt='Project'
                       className='Project-Banner w-full h-full bg-cover rounded-2xl'
                     />
-                    <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-2'>
-                      <div className='bg-transparent w-full flex justify-end gap-2 items-center'>
-                        <div className='px-3 rounded-2xl bg-white opacity-80'>
-                          <span className='Like-Counts text-black'>{project.likeCount}</span>
-                        </div>
-                        <Link to={project.link} className='Like-Project-btn p-1 bg-white rounded-full opacity-90'>
-                          <FaGithub className='Like-Project-btn-Icon text-2xl' />
-                        </Link>
-                      </div>
-                      <div className=''>
-                        <Link to={project.demo} className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Live Preview</Link>
-                      </div>
-                    </div>
                   </div>
                   <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
-                  <div className='w-full h-[10rem] overflow-y-auto'>
+                  <div className='w-full max-h-[10rem] lg:h-[10rem] overflow-y-auto'>
                     <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                       {project.description}
                     </p>
