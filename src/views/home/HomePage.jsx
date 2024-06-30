@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
 import ProjectData from '../../components/projectcard/ProjectData';
-import { FaGithub } from 'react-icons/fa';
 
 function HomePage() {
   const lastItem = ProjectData.slice(-1);
