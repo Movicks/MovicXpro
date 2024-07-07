@@ -57,7 +57,7 @@ function ProjectCard() {
               </div>
             </div>
             <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
-            <div className='w-full max-h-[10rem] lg:h-[7rem] overflow-y-auto'>
+            <div className='w-full h-[9rem] lg:h-[7rem] overflow-y-auto'>
               <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                 {project.description}
               </p>
