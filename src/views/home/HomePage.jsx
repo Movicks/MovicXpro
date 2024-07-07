@@ -60,7 +60,7 @@ function HomePage() {
             </div>
             <section className='Stacks-Container w-full flex flex-col-reverse md:flex-row justify-between gap-3'>
               <div className='Stacks-boxs relative bg-gray-300 w-full md:w-1/2 lg:w-[20rem] h-[25rem] shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
-                <div className='w-full h-full bg-red-200 flex items-center justify-center'>
+                <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
                   <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
                 </div>
                 <div className='absolute bottom-0 left-0 right-0 px-3 py-3 gap-2 flex flex-col justify-start items-start opacity-40 w-full bg-black h-[35%]'>
