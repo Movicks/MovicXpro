@@ -130,8 +130,8 @@ const Footer = () => {
         </p>
         <p className="mb-2 font-bold">{modalContent.accName}{modalContent.column} <span className='text-sm text-gray-500'>{modalContent.accountName}</span>
         </p>
-        <p className="mb-4 break-words font-bold">{modalContent.label}: <span className='text-sm text-gray-500'>{modalContent.accountInfo}</span></p>
-        <p className="mb-4 break-words font-bold">{modalContent.accType}{modalContent.typeCol} <span className='text-sm text-gray-500'>{modalContent.Type}</span></p>
+        <p className="mb-2 break-words font-bold">{modalContent.label}: <span className='text-sm text-gray-500'>{modalContent.accountInfo}</span></p>
+        <p className="mb-2 break-words font-bold">{modalContent.accType}{modalContent.typeCol} <span className='text-sm text-gray-500'>{modalContent.Type}</span></p>
         <div className='bg-transparent flex justify-end'>
           <button
             onClick={handleCopy}
