@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import { Call, GitHub, LinkedIn, Mail, YouTube } from '@mui/icons-material';
 import { FaTiktok, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import Modal from './Modal';
+import { toast } from 'react-toastify';
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({ title: '', accountInfo: '', label: '' , bankTitle: '', column: '', bankName: '', accName: '', accountName: '', accType: '', Type: '', typeCol: ''});
+
+  const handleOpenModal = (title, accountInfo, label, bankTitle, column, bankName, accName, accountName, accType, Type, typeCol) => {
+    setModalContent({ title, accountInfo, label, bankTitle, column, bankName, accName, accountName, accType, Type, typeCol });
+    setIsModalOpen(true);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(modalContent.accountInfo);
+    toast.success(`${modalContent.label} Copied`);
+  };
+
   return (
     <footer className='footer1_container'>
       <h1 className="heading">Quick<span> Links</span></h1>
@@ -54,11 +69,47 @@ const Footer = () => {
           </ul>
         </div>
         <div className='sec quickLinks'>
-          <h2>Pay Methods</h2>
+          <h2>Support Me</h2>
           <ul>
-            <li><Link to='#'>Grey</Link></li>
-            <li><Link to='#'>Payoneer</Link></li>
-            <li><Link to='#'>Bitcoin</Link></li>
+            <li>
+              <button onClick={() => handleOpenModal('UBA',
+                import.meta.env.VITE_UBA_ACCOUNT_NUMBER,
+                'Account Number', 'Bank',
+                ':',
+                import.meta.env.VITE_UBA_BANK_NAME,
+                'Account Name',
+                import.meta.env.VITE_UBA_ACCOUNT_NAME,
+                '',
+                '',
+                ''
+              )}>UBA</button>
+            </li>
+            <li>
+              <button onClick={() => handleOpenModal('Payoneer',
+                import.meta.env.VITE_PAYONEER_ACCOUNT_NUMBER,
+                'Account Number',
+                'Bank',
+                ':',
+                import.meta.env.VITE_PAYONEER_BANK_NAME,
+                'Beneficiary',
+                import.meta.env.VITE_PAYONEER_ACCOUNT_NAME,
+                'Account Type',
+                'Checking',
+                ':'
+              )}>Payoneer</button>
+            </li>
+            <li>
+              <button onClick={() => handleOpenModal('Bitcoin',
+                import.meta.env.VITE_BITCOIN_ADDRESS,
+                'Bitcoin Address',
+                '',
+                '',
+                '',
+                '',
+                '',
+                ''
+              )}>Bitcoin</button>
+            </li>
           </ul>
         </div>
         <div className='sec contact_us'>
@@ -72,6 +123,24 @@ const Footer = () => {
       <div className='copyrightText text-center'>
         <p className='px-2'>CopyRights &copy;2024 MovicXPro. All Rights Reserved.</p>
       </div>
+      
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2 className="text-xl mb-4 font-bold text-[#6371F6]">{modalContent.title}</h2>
+        <p className="mb-2 font-bold">{modalContent.bankTitle}{modalContent.column} <span className='text-sm text-gray-500'>{modalContent.bankName}</span>
+        </p>
+        <p className="mb-2 font-bold">{modalContent.accName}{modalContent.column} <span className='text-sm text-gray-500'>{modalContent.accountName}</span>
+        </p>
+        <p className="mb-4 break-words font-bold">{modalContent.label}: <span className='text-sm text-gray-500'>{modalContent.accountInfo}</span></p>
+        <p className="mb-4 break-words font-bold">{modalContent.accType}{modalContent.typeCol} <span className='text-sm text-gray-500'>{modalContent.Type}</span></p>
+        <div className='bg-transparent flex justify-end'>
+          <button
+            onClick={handleCopy}
+            className="bg-[#6371F6] text-white px-5 py-1 rounded hover:bg-gray-600 shadow-custom transition duration-300"
+          >
+            Copy
+          </button>
+        </div>
+      </Modal>
     </footer>
   );
 }

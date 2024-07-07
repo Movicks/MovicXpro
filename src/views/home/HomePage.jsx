@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
 import ProjectData from '../../components/projectcard/ProjectData';
+import Resume from '../../assets/Resume/ResumePro.pdf'
 
 function HomePage() {
   const lastItem = ProjectData.slice(-1);
@@ -11,7 +12,14 @@ function HomePage() {
 
     const handleChange = () => {
         setIsChecked(!isChecked);
-    };
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = `${Resume}`;
+    link.download = 'ResumePro.pdf';
+    link.click();
+  };
   return (
     <section className="h-full w-full flex Home hide-scrollbar">
       <div className="Dashboard-resDiv min-w-[15rem]"></div>
@@ -58,7 +66,7 @@ function HomePage() {
                 <div className='absolute bottom-0 left-0 right-0 px-3 py-3 gap-2 flex flex-col justify-start items-start opacity-40 w-full bg-black h-[35%]'>
                   <div className='text-white'>React Dev</div>
                   <h1 className='text-white text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
-                  <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md'>Download CV</button>
+                  <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md' onClick={handleDownload}>Download CV</button>
                 </div>
               </div>
               <div className='Stacks-boxs shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
