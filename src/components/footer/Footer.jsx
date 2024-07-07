@@ -72,7 +72,7 @@ const Footer = () => {
           <h2>Support Me</h2>
           <ul>
             <li>
-              <button onClick={() => handleOpenModal('UBA',
+              <button onClick={() => handleOpenModal('UBA BANK',
                 import.meta.env.VITE_UBA_ACCOUNT_NUMBER,
                 'Account Number', 'Bank',
                 ':',
