@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <footer className='footer1_container'>
-      <h1 className="heading">Quick<span> Links</span></h1>
+      <h1 className="heading mb-2">Quick<span> Links</span></h1>
       <div className='footer-container md:flex align-center'>
         <div className='sec about_us'>
           <h2>About Me</h2>
