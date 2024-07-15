@@ -41,7 +41,7 @@ function ContactForm() {
 
         try {
             // Send form data to the backend
-            const response = await axios.post('https://pro-nodemailer.onrender.com/api/contact', formData);
+            const response = await axios.post('https://pro-nodemailer.onrender.com/contact', formData);
 
             // Handle success response
             toast.success(response.data.message);
