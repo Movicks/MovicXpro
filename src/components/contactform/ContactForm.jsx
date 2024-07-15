@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 function ContactForm() {
     const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ function ContactForm() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!formData.fullName) {
@@ -38,18 +39,25 @@ function ContactForm() {
             return;
         }
 
-        // Handle form submission logic here
-        console.log('Form submitted', formData);
-        toast.success('Form submitted successfully!');
+        try {
+            // Send form data to the backend
+            const response = await axios.post('http://localhost:5000/api/contact', formData);
 
-        // Clear the form fields
-        setFormData({
-            fullName: '',
-            email: '',
-            phone: '',
-            title: '',
-            message: ''
-        });
+            // Handle success response
+            toast.success(response.data.message);
+
+            // Clear the form fields
+            setFormData({
+                fullName: '',
+                email: '',
+                phone: '',
+                title: '',
+                message: ''
+            });
+        } catch (error) {
+            // Handle error response
+            toast.error('Failed to submit the form. Please try again later.');
+        }
     };
 
     return (
