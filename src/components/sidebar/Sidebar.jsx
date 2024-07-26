@@ -33,7 +33,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
           { text: 'About Me', path: '/about' },
           { text: 'Projects', path: '/projects' },
           { text: 'Resume', path: '/resume' },
-          { text: 'Contact Me', path: '/contact-us' },
+          { text: 'Contact Me', path: '/contact' },
           { text: 'Blog Post', path: '/blog' },
         ].map((item) => (
           <ListItemButton
