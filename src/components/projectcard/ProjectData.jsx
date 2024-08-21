@@ -62,7 +62,7 @@ const ProjectData = [
     stacks: ['HTML', 'CSS', 'React', 'Tailwindcss']
   },
   {
-    id: 5,
+    id: 6,
     name: 'StyleInSync E-commerce',
     Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
     demo: 'https://style-in-sync-frontend.vercel.app/',
