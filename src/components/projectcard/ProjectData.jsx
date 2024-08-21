@@ -68,7 +68,7 @@ const ProjectData = [
     demo: 'https://style-in-sync-frontend.vercel.app/',
     description: 'This is an ongoing e-commerce web app I collaborated when i was doing a voluntary work at Evolve Tech Group. I worked on the return, exchange, return policy, map tracking, delivery section, and product tracking.',
     likeCount: 10,
-    link: 'https://github.com/Miatos-Solutions/PWA-frontend',
+    link: 'https://github.com/EvolveHQ-985/style-in-sync-frontend',
     stacks: ['HTML', 'CSS', 'React', 'Tailwindcss']
   },
   ];
