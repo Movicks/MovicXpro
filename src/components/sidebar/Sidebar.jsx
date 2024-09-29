@@ -44,6 +44,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               background: location.pathname === item.path 
                 ? 'linear-gradient(135deg, rgba(88, 99, 246, 0.76), rgba(10, 10, 73, 0.2))' 
                 : 'transparent',
+              color: location.pathname === item.path ? 'white' : '',
               ml: 0.5,
               borderTopLeftRadius: location.pathname === item.path ? '20px' : 0,
               borderBottomLeftRadius: location.pathname === item.path ? '20px' : 0,
