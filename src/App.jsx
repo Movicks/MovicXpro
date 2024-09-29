@@ -131,7 +131,7 @@ const App = () => {
                   <h1 className='text-2xl h-[3rem] flex items-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500'>
                     <span>M</span>ovic<span className='X-styles'>X</span>
                   </h1>
-                  <span className='h-[1.5rem] flex items-center absolute pl-1 pr-1 pt-1 pb-1 right-0 top-[2px] text-black text-lg bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 text-white rounded-[4px]'>Pro</span>
+                  <span className='h-[1.5rem] flex items-center absolute pl-1 pr-1 pt-1 pb-1 right-0 top-[2px] text-lg bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 text-white rounded-[4px]'>Pro</span>
                 </div>
               </Typography>
             </Box>
