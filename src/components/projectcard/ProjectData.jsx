@@ -67,7 +67,7 @@ const ProjectData = [
     Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
     demo: 'https://style-in-sync-frontend.vercel.app/',
     description: 'This is an ongoing e-commerce web app I collaborated when i was doing a voluntary work at Evolve Tech Group. I worked on the return, exchange, return policy, map tracking, delivery section, and product tracking.',
-    likeCount: 10,
+    likeCount: 1100000,
     link: 'https://github.com/EvolveHQ-985/style-in-sync-frontend',
     stacks: ['HTML', 'CSS', 'React', 'Tailwindcss']
   },
