@@ -20,6 +20,60 @@ function HomePage() {
     link.download = 'ResumePro.pdf';
     link.click();
   };
+
+
+  const Stacks1 = [
+    {
+      id: 0,
+      stack1: "HTML"
+    },
+    {
+      id: 1,
+      stack1: "CSS"
+    },
+    {
+      id: 2,
+      stack1: "JavaScript"
+    },
+    {
+      id: 3,
+      stack1: "TypeScript"
+    },
+    {
+      id: 4,
+      stack1: "Python"
+    },
+    {
+      id: 5,
+      stack1: "React"
+    },
+    {
+      id: 6,
+      stack1: "Tailwindcss"
+    },
+    {
+      id: 7,
+      stack1: "Bootstrap"
+    },
+    {
+      id: 8,
+      stack1: "NodeJS"
+    },
+    {
+      id: 9,
+      stack1: "MongoDB"
+    },
+    {
+      id: 10,
+      stack1: "Git"
+    },
+    {
+      id: 11,
+      stack1: "Sanity"
+    },
+  ]
+
+
   return (
     <section className="h-full w-full flex Home hide-scrollbar">
       <div className="Dashboard-resDiv min-w-[15rem]"></div>
@@ -82,26 +136,17 @@ function HomePage() {
                 <div className='w-full h-[2px] bg-gray-300'></div>
                 <section className='flex flex-col gap-3 py-2 rounded-2xl'>
                   <h1 className='text-xl font-bold text-[#6371f6]'>My Stacks ?</h1>
+                  {/*Stacks*/}
                   <div className="w-full h-[10rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
-                    <span className="Html py-1 px-6 h-[2rem] m-0 rounded-3xl">HTML</span>
-                    <span className="CSS py-1 px-6 h-[2rem] m-0 rounded-3xl">CSS</span>
-                    <span className="Javascript py-1 px-6 h-[2rem] m-0 rounded-3xl">JavaScript</span>
-                    <span className="React py-1 px-6 h-[2rem] m-0 rounded-3xl">React</span>
-                    <span className="Tailwindcss py-1 px-6 h-[2rem] m-0 rounded-3xl">Tailwindcss</span>
-                    <span className="Bootstrap py-1 px-6 h-[2rem] m-0 rounded-3xl">Bootstrap</span>
-                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Sanity.io</span>
-                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">NodeJs</span>
-                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">MongoDB</span>
-                    <span className="Python py-1 px-6 h-[2rem] m-0 rounded-3xl">Python</span>
-                    <span className="Sanity py-1 px-6 h-[2rem] m-0 rounded-3xl">Git</span>
-                    <span className="C-program py-1 px-6 h-[2rem] m-0 rounded-3xl">C programming</span>
-                    <span className="Scratch py-1 px-6 h-[2rem] m-0 rounded-3xl">Scratch</span>
+                    {Stacks1.map((item, id) => (
+                      <span key={id} className="HTML py-1 px-6 h-[2rem] m-0 rounded-3xl text-black">{item.stack1}</span>
+                    ))}
                   </div>
                 </section>
               </div>
             </section>
           </section>
-          <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[20rem] h-[auto] gap-3 flex flex-col justify-between px-1">
+          <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[22rem] h-[auto] gap-3 flex flex-col justify-between px-1">
             {lastItem.map((project) => (
               <div key={project.id} className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
                 <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
@@ -122,7 +167,7 @@ function HomePage() {
                     <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
                     <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
                       {project.stacks.map((stack, stackIndex) => (
-                          <span key={stackIndex} className={`${stack} py-1 px-4 h-[2rem] m-0 rounded-3xl`}>{stack}</span>
+                          <span key={stackIndex} className={`HTML py-1 px-4 h-[2rem] m-0 rounded-3xl`}>{stack}</span>
                       ))}
                     </div>
                   </section>
