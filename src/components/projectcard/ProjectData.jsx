@@ -67,9 +67,19 @@ const ProjectData = [
     Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
     demo: 'https://style-in-sync-frontend.vercel.app/',
     description: 'This is an ongoing e-commerce web app I collaborated when i was doing a voluntary work at Evolve Tech Group. I worked on the return, exchange, return policy, map tracking, delivery section, and product tracking.',
-    likeCount: 1100000,
+    likeCount: 11,
     link: 'https://github.com/EvolveHQ-985/style-in-sync-frontend',
     stacks: ['HTML', 'CSS', 'React', 'Tailwindcss']
+  },
+  {
+    id: 7,
+    name: 'wHTa networks',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'https://whtanetworks.com/',
+    description: 'This web application is a platform used tech experts who specializes in teaching various Tech skills. A platform for those who wants to advance their career in Tech and for those who are new to teach. I worked on forms, calling of API, responsiveness, and little animations. Here i collaborated with my team leads and mate to achieve these goals.',
+    likeCount: 1,
+    link: '',
+    stacks: ['HTML', 'CSS', 'React', 'Tailwindcss', "Git", "Axios", "APIs"]
   },
   ];
   

@@ -245,11 +245,17 @@ body {
   }
 }
 /* LOADER ENDS HERE */
+@media (max-width: 1280px) {
+  .LeftHand{
+    max-width: 40rem;
+  }
+}
 
-@media (min-width: 960px) {
+@media (min-width: 885px) {
   .Dashboard-resDiv {
     width: 15rem;
     background: white;
+    display: block;
   }
   .Hide-bubble{
     display: none;
@@ -260,7 +266,7 @@ body {
   }
 }
 
-@media (max-width: 959px) {
+@media (max-width: 884px) {
   .Dashboard-resDiv {
     display: none;
   }
@@ -272,6 +278,9 @@ body {
   }
   .Hide-bubble{
     display: none;
+  }
+  .LeftHand{
+    min-width: 97vw;
   }
 
 }

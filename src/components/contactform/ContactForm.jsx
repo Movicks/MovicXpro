@@ -73,7 +73,7 @@ function ContactForm() {
                     aria-label="Contact form"
                 >
                     <div className="flex lg:flex-row justify-center gap-3 w-full lg:gap-9">
-                        <div className="flex-1 w-[9.7rem] lg:w-[18rem]">
+                        <div className="flex-1 w-[9.7rem] md:w-[20rem]">
                             <input
                                 type="text"
                                 placeholder="Full name"
