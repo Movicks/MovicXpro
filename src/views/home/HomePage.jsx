@@ -75,12 +75,12 @@ function HomePage() {
 
 
   return (
-    <section className="h-full w-full flex Home hide-scrollbar">
+    <section className="h-full w-full flex Home hide-scrollbar bg-yellow-400">
       <div className="Dashboard-resDiv min-w-[15rem]"></div>
-      <main className="glass-effect-3 bg-opacity-50 h-full flex-grow">
-        <div className="Home-box w-full flex flex-col md:flex-row justify-between p-3 gap-3">
-          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-white w-full md:w-1/2 lg:w-[57rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
-            <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between relative overflow-hidden">
+      <main className="glass-effect-3 bg-blue-500 w-full h-full flex-grow">
+        <div className="Home-box w-full flex flex-col lg:flex-row justify-between p-3 gap-3">
+          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-transparent w-full lg:w-[56rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
+            <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between w-full relative overflow-hidden">
               <div className='flex flex-col justify-between h-[8.3rem] items-start'>
                 <header className="text-3xl font-bold w-[15.8rem] text-white">Exciting projects every week</header>
                 <Link to='/projects' className="bg-white px-[30px] py-2 rounded-full border-2 border-gray-400 opacity-90 glass-effect">
@@ -113,7 +113,7 @@ function HomePage() {
               </div>
             </div>
             <section className='Stacks-Container w-full flex flex-col-reverse md:flex-row justify-between gap-3'>
-              <div className='Stacks-boxs relative bg-gray-300 w-full md:w-1/2 lg:w-[20rem] h-[25rem] shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
+              <div className='Stacks-boxs relative bg-gray-300 w-full md:w-[25rem] h-full shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
                 <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
                   <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
                 </div>

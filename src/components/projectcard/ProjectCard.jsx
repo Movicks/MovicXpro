@@ -29,9 +29,9 @@ function ProjectCard() {
   };
 
   return (
-    <ul className='w-full px-2 py-2 flex flex-wrap gap-2'>
+    <ul className='w-full px-2 py-2 flex flex-wrap gap-4 lg:gap-2 justify-center lg:justify-start lg:px-2'>
       {ProjectCardItems.slice(0).reverse().map((project, index) => ( 
-        <li key={project.id} className='Demo-Cards w-[19.3rem] h-[auto]'>
+        <li key={project.id} className='Demo-Cards w-[19.3rem] h-[auto] lg:w-[19.3rem]'>
           <div className='bg-white Project-Card p-2 shadow-custom h-[28rem] rounded-xl flex flex-col gap-2 border-2'>
             <div className='relative flex items-center justify-center mb-2 h-[10rem] Project-Image-container rounded-2xl overflow-hidden'>
               <img 

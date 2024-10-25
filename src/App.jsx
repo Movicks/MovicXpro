@@ -103,7 +103,7 @@ const App = () => {
       <ToastContainer />
 
       <CssBaseline />
-      <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden' }} className='bg-cover '>
+      <Box sx={{ display: 'flex', height: '100vh', width:'100vw', overflow: 'hidden' }} className='bg-cover '>
         <AppBar 
           position="fixed" 
           sx={{ 
