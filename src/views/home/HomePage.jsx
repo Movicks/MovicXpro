@@ -76,10 +76,10 @@ function HomePage() {
 
   return (
     <section className="h-full w-full flex Home hide-scrollbar bg-yellow-400">
-      <div className="Dashboard-resDiv min-w-[15rem]"></div>
+      <div className="Dashboard-resDiv min-w-[15rem] bg-red-500"></div>
       <main className="glass-effect-3 bg-blue-500 w-full h-full flex-grow">
         <div className="Home-box w-full flex flex-col lg:flex-row justify-between p-3 gap-3">
-          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-transparent w-full lg:w-[56rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
+          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-transparent w-full lg:max-w-[86rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
             <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between w-full relative overflow-hidden">
               <div className='flex flex-col justify-between h-[8.3rem] items-start'>
                 <header className="text-3xl font-bold w-[15.8rem] text-white">Exciting projects every week</header>
@@ -113,16 +113,20 @@ function HomePage() {
               </div>
             </div>
             <section className='Stacks-Container w-full flex flex-col-reverse md:flex-row justify-between gap-3'>
-              <div className='Stacks-boxs relative bg-gray-300 w-full md:w-[25rem] h-full shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
-                <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
-                  <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
-                </div>
-                <div className='absolute bottom-0 left-0 right-0 px-3 py-3 gap-2 flex flex-col justify-start items-start opacity-40 w-full bg-black h-[35%]'>
-                  <div className='text-white'>React Dev</div>
-                  <h1 className='text-white text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
-                  <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md' onClick={handleDownload}>Download CV</button>
+              <div className="px-2 md:px-0 md:w-[25rem] w-full">
+                <div className='Stacks-boxs relative bg-gray-300 w-full h-full shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
+                  <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
+                    <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
+                  </div>
+                  <div className='absolute bottom-0 left-0 right-0 px-3 py-3 gap-2 flex flex-col justify-start items-start opacity-40 w-full bg-black h-[35%]'>
+                    <div className='text-white'>React Dev</div>
+                    <h1 className='text-white text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
+                    <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md font-semibold' onClick={handleDownload}>Download CV</button>
+                  </div>
                 </div>
               </div>
+
+
               <div className='Stacks-boxs shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
                 <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Movicx ?</h1>
                 <p className='text-start text-gray-400'>
@@ -146,9 +150,9 @@ function HomePage() {
               </div>
             </section>
           </section>
-          <section className="RightHand bg-transparent w-full md:w-1/2 lg:w-[22rem] h-[auto] gap-3 flex flex-col justify-between px-1">
+          <section className="RightHand bg-transparent w-full md:w-1/2 lg:max-w-[25rem] h-[auto] gap-3 flex flex-col justify-between px-1">
             {lastItem.map((project) => (
-              <div key={project.id} className='Recent-Project-box bg-white h-[auto] shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
+              <div key={project.id} className='Recent-Project-box bg-white h-[auto] w-full shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
                 <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
                 <div className='w-full h-[2px] bg-gray-300'></div>
                 <div className='bg-white h-[auto] Project-Card p-2 rounded-xl flex flex-col gap-2'>

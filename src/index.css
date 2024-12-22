@@ -275,12 +275,13 @@ body {
   }
   .Home{
     height: 100vh;
+    width: 100vw;
   }
   .Hide-bubble{
     display: none;
   }
   .LeftHand{
-    min-width: 97vw;
+    max-width: 97vw;
   }
 
 }
