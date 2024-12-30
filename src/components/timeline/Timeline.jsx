@@ -2,15 +2,17 @@ import React from 'react';
 import './Timeline.css'; 
 
 const education = [
-  { id: 1, year: '2024 - In view', degree: 'Bachelor of Science in Computer Science', school: 'Global Wealth University Lome Togo' },
+  { id: 1, year: '2024', degree: 'Bachelor of Science in Computer Science', school: 'Global Wealth University Lome Togo' },
   { id: 2, year: '2023', degree: 'Awarded by David J. Malan', school: 'Havard Univerty CS50x' },
   { id: 3, year: '2021', degree: 'British Columbia', school: 'Ministry of Justice, British Columbia, Canada' },
 ];
 
 const jobExperience = [
-  { id: 1, year: '2024 - Present', title: 'Frontend Developer', company: 'Miatos Solutions' },
-  { id: 2, year: '2023 - Three Months', title: 'Junior Software Engineering Intern', company: 'ProjectStack (Remote)' },
-  { id: 3, year: '2023 - Three Months', title: 'Frontend Development Intern', company: 'Zuri CDT (Remote)' },
+  { id: 0, year: 'Sept 2024 - Present', title: 'Frontend Developer ( Contract )', company: 'wHTa Networks' },
+  { id: 1, year: '2024 - Dec 2024', title: 'Frontend Developer ( Volunteered )', company: 'Evolve Tech Group' },
+  { id: 2, year: '2024 - Jul 2024', title: 'Frontend Developer ( Contract )', company: 'Miatos Solutions' },
+  { id: 3, year: '2023 - Three Months', title: 'Junior Software Engineering Intern', company: 'ProjectStack (Remote)' },
+  { id: 4, year: '2023 - Three Months', title: 'Frontend Development Intern', company: 'Zuri CDT (Remote)' },
 ];
 
 const Timeline = () => {
