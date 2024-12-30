@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
 import ProjectData from '../../components/projectcard/ProjectData';
-import Resume from '../../assets/Resume/ResumePro.pdf'
+import Resume from '../../assets/Resume/ResumeMovicx.pdf'
 import { Stacks1 } from '../../components/Stacks1';
 
 function HomePage() {
@@ -18,7 +18,7 @@ function HomePage() {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = `${Resume}`;
-    link.download = 'ResumePro.pdf';
+    link.download = 'ResumeMovicx.pdf';
     link.click();
   };
 
@@ -71,14 +71,14 @@ function HomePage() {
                   <div className='absolute bottom-0 left-0 right-0 px-3 py-2 md:py-3 gap-1 flex flex-col justify-end items-start bg-opacity-40 w-full bg-black h-auto'>
                     <div className='text-gray-400'>React Dev</div>
                     <h1 className='text-gray-400 text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
-                    <button className='text-black py-2 px-4 rounded-3xl bg-gray-400 opacity-100 text-md font-semibold' onClick={handleDownload}>Download CV</button>
+                    <button className='text-black py-2 px-4 rounded-3xl bg-gray-400 opacity-100 text-md font-semibold' onClick={handleDownload}>Download Resume</button>
                   </div>
                 </div>
               </div>
 
 
               <div className='Stacks-boxs shadow-custom rounded-2xl w-full lg:w-[30rem] 2xl:max-w-[40rem] 2xl:min-w-[33rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
-                <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Movicx ?</h1>
+                <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Victor?</h1>
                 <p className='text-start text-gray-400'>
                   Onaiterimoh Victor Idepe is a passionate Frontend Developer specializing in bringing
                   high-quality UI/UX designs to life. I consider myself a qualified Frontend Developer
@@ -133,7 +133,7 @@ function HomePage() {
                   </div>
                   <section className='flex flex-col gap-1 rounded-2xl'>
                     <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
-                    <div className="w-full h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
+                    <div className="w-full h-[7.4rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
                       {project.stacks.map((stack, stackIndex) => (
                           <span key={stackIndex} className={`HTML py-1 px-4 h-[2rem] m-0 rounded-3xl`}>{stack}</span>
                       ))}

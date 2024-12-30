@@ -55,12 +55,12 @@ function AboutPage() {
             <div className='flex justify-center align-center'>
               <div className='md:flex justify-center mb-3'>
                   <div className='client-mark flex'>
-                    <div className='Client-services bg-white shadow-custom p-3 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] justify-center align-center text-center'>
+                    <div className='Client-services bg-white shadow-custom py-3 px-2 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] justify-center align-center text-center'>
                     {/* icons here */}
                         <CodeOffOutlined className='Service-icon text-[#6371F6]'/>
                         <p className=''>Web <br/> Development</p>
                     </div>
-                    <div className='Client-services bg-white shadow-custom mx-1 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] pb-5 pt-3 px-4 justify-center align-center text-center'>
+                    <div className='Client-services bg-white shadow-custom mx-1 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] pb-5 pt-3 px-2 justify-center align-center text-center'>
                         <BusinessCenterOutlined className='Service-icon text-[#6371F6]'/>
                         <p>Project Management</p>
                     </div>

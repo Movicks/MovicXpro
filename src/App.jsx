@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Sidebar from './components/sidebar/Sidebar';
 import WelcomeLogoAI from './assets/Images/LogoAIW2.png';
 import CustomError from "./views/customerror/CustomError";
+import Loader from "./utils/Loader";
 
 // Importing views using lazy loading
 const Home = lazy(() => import('./views/home/HomePage'));
@@ -149,64 +150,43 @@ const App = () => {
           </Toolbar>
         </AppBar>
         <Sidebar mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} isMobile={isMobile} isTablet={isTablet} />
-        <Box component="main" sx={{ flexGrow: 1, pt: 7.5, overflow: 'auto', height: '100vh', backgroundColor: 'transparent' }} className='overflow-auto scrollbar-hide'>
+        <Box component="main" sx={{ flexGrow: 1, pt: 7.5, overflow: 'auto', height: '100vh', width: "100vw", backgroundColor: 'transparent' }} className='overflow-auto scrollbar-hide'>
           <Routes>
             <Route path='/' element={
               <Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-                <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                  <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                  <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                </svg>
+                <Loader/>
               </div>}><Home />
               </Suspense>}
             />
             <Route path='/about' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-              <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-              </svg>
+              <Loader/>
             </div>}><About />
             </Suspense>}
             />
             <Route path='/contact' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-              <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-              </svg>
+              <Loader/>
             </div>}><Contact />
             </Suspense>}
             />
             <Route path='/blog' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-              <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-              </svg>
+              <Loader/>
             </div>}><Blog />
             </Suspense>}
             />
             <Route path='/projects' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-              <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-              </svg>
+              <Loader/>
             </div>}><Projects />
             </Suspense>}
             />
             <Route path='/resume' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-              <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-              </svg>
+              <Loader/>
             </div>}><ResumePage />
             </Suspense>}
             />
             {/*Error page*/}
 
             <Route path='*' element={<Suspense fallback={<div className="flex items-center justify-center h-[100vh] w-[100vw]">
-              <svg className="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet">
-                <path className="track" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-                <path className="car" strokeWidth={4} fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25" />
-              </svg>
+              <Loader/>
             </div>}><CustomError />
             </Suspense>}
             />

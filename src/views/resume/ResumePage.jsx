@@ -10,7 +10,7 @@ function ResumePage() {
       <main className='glass-effect-3 bg-white bg-opacity-50 backdrop-blur-xl h-full flex-grow'>
         <div className='Home-box pt-3 w-full'>
           <section className='Banner-container w-full h-[17rem] px-2'>
-            <Banner header='My Resume' des='My Coding Quest'/>
+            <Banner header='My Resume' des='My Career'/>
           </section>
           <section>
             <Timeline/>
