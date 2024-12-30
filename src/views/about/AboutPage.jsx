@@ -28,14 +28,14 @@ function AboutPage() {
                         <h2 className="heading">
                             <span className="onaiB">Anywhere</span> and <span className="onai2">anytime</span> i provide<span className="onai2"> professional</span> solutions.
                         </h2>
-                        <p>Onaiterimoh Victor Idepe, known as Movicx, is a Front-end Developer with expertises in bring UI designs to life,
+                        <p>Onaiterimoh Victor Idepe, is a Front-end Developer with expertises in bring UI designs to life,
                           as well as junior-level full stack experience. I enjoy building interactive and responsive webpages that solve human problems.
-                          With a background in customer service, tech training & support, content writing, and project management,
+                          With a background in tech training & support, content writing, and project management,
                           I am well-equipped to add value and build a dynamic career by developing scalable tech solutions that addresses user needs.
                           I am always ready to learn and improve, aiming to become a world-class developer in the tech space.
                         </p>
                         <p>
-                            I can build and maintain websites, implementing responsive designs, 
+                            I build and maintain websites, implementing responsive designs, 
                             optimizing websites performance and collaborating with any Development team to implement new features and fix bugs.
                         </p>
                         <p>
@@ -62,11 +62,11 @@ function AboutPage() {
                     </div>
                     <div className='Client-services bg-white shadow-custom mx-1 max-w-[7.2rem] lg:w-full lg:max-w-[11rem] pb-5 pt-3 px-4 justify-center align-center text-center'>
                         <BusinessCenterOutlined className='Service-icon text-[#6371F6]'/>
-                        <p>Digital Marketing</p>
+                        <p>Project Management</p>
                     </div>
                     <div className='Client-services bg-white shadow-custom py-3 px-2 lg:p-3 max-w-[7.2rem] lg:w-full lg:max-w-[16rem] justify-center align-center text-center'>
                         <AdsClick className='Service-icon text-[#6371F6]'/>
-                        <p>Social Media Management</p>
+                        <p>Code Mentorship</p>
                     </div>
                   </div>
               </div>

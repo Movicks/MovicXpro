@@ -30,9 +30,6 @@ function ContactPage() {
                 </div>
                 <div className='w-full h-[2px] bg-gray-300 my-3'></div>
                 <div>
-                  <h1 className='text-[13px] font-bold pb-3'>
-                    Blck Y, Room 4. Nigerian Armed Forces Resettlement Center Oshodi Lagos.
-                  </h1>
                   <div className='flex gap-2 items-center'>
                     <TbPhoneCalling className='text-4xl text-[#6371F6]' />
                     <div>

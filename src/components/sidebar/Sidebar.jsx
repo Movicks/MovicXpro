@@ -96,7 +96,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
         </div>
         <div className='w-full h-[2px] bg-gray-300 mt-3'></div>
         <section className='w-full h-[auto] flex flex-col items-start pt-1'>
-          <h1 className='text-lg text-blue-500'>Upcoming Tech Events</h1>
+          <h1 className='text-lg text-blue-500'>Previous Tech Events</h1>
           <section className='w-full flex flex-col gap-2 items-start pb-2 pt-1'>
             <Link to='https://www.instagram.com/p/C9DFiKgIiuO/?igsh=MXd2eXNjNmowYmJmdw==' className='shadow-custom py-1 flex flex-col w-full px-2'>
               <h3 className='flex items-center text-gray-500'>GenZ Tech Event Tickets</h3>

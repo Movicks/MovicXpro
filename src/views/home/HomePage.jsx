@@ -5,6 +5,7 @@ import { CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
 import ProjectData from '../../components/projectcard/ProjectData';
 import Resume from '../../assets/Resume/ResumePro.pdf'
+import { Stacks1 } from '../../components/Stacks1';
 
 function HomePage() {
   const lastItem = ProjectData.slice(-1);
@@ -22,64 +23,13 @@ function HomePage() {
   };
 
 
-  const Stacks1 = [
-    {
-      id: 0,
-      stack1: "HTML"
-    },
-    {
-      id: 1,
-      stack1: "CSS"
-    },
-    {
-      id: 2,
-      stack1: "JavaScript"
-    },
-    {
-      id: 3,
-      stack1: "TypeScript"
-    },
-    {
-      id: 4,
-      stack1: "Python"
-    },
-    {
-      id: 5,
-      stack1: "React"
-    },
-    {
-      id: 6,
-      stack1: "Tailwindcss"
-    },
-    {
-      id: 7,
-      stack1: "Bootstrap"
-    },
-    {
-      id: 8,
-      stack1: "NodeJS"
-    },
-    {
-      id: 9,
-      stack1: "MongoDB"
-    },
-    {
-      id: 10,
-      stack1: "Git"
-    },
-    {
-      id: 11,
-      stack1: "Sanity"
-    },
-  ]
-
 
   return (
-    <section className="h-full w-full flex Home hide-scrollbar bg-yellow-400">
-      <div className="Dashboard-resDiv min-w-[15rem] bg-red-500"></div>
-      <main className="glass-effect-3 bg-blue-500 w-full h-full flex-grow">
-        <div className="Home-box w-full flex flex-col lg:flex-row justify-between p-3 gap-3">
-          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-transparent w-full lg:max-w-[86rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
+    <section className="h-full w-full flex Home hide-scrollbar bg-transparent">
+      <div className="Dashboard-resDiv min-w-[15rem]"></div>
+      <main className="glass-effect-3 bg-transparent w-full h-full">
+        <div className="Home-box flex flex-col lg:items-start lg:flex-row justify-between p-3 gap-3 w-full">
+          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-transparent w-full 2xl:max-w-[68rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
             <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between w-full relative overflow-hidden">
               <div className='flex flex-col justify-between h-[8.3rem] items-start'>
                 <header className="text-3xl font-bold w-[15.8rem] text-white">Exciting projects every week</header>
@@ -112,36 +62,36 @@ function HomePage() {
                 <div className="bubble bubble-right w-5 h-5 mt-5 Hide-bubble"></div>
               </div>
             </div>
-            <section className='Stacks-Container w-full flex flex-col-reverse md:flex-row justify-between gap-3'>
-              <div className="px-2 md:px-0 md:w-[25rem] w-full">
+            <section className='Stacks-Container w-full flex flex-col-reverse xl:flex-row justify-between gap-3'>
+              <div className="px-2 md:px-0 md:w-[25rem] xl:w-[23rem] w-full md:hidden lg:flex">
                 <div className='Stacks-boxs relative bg-gray-300 w-full h-full shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
                   <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
                     <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
                   </div>
-                  <div className='absolute bottom-0 left-0 right-0 px-3 py-3 gap-2 flex flex-col justify-start items-start opacity-40 w-full bg-black h-[35%]'>
-                    <div className='text-white'>React Dev</div>
-                    <h1 className='text-white text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
-                    <button className='text-black py-2 px-4 rounded-3xl bg-white opacity-100 text-md font-semibold' onClick={handleDownload}>Download CV</button>
+                  <div className='absolute bottom-0 left-0 right-0 px-3 py-2 md:py-3 gap-1 flex flex-col justify-end items-start bg-opacity-40 w-full bg-black h-auto'>
+                    <div className='text-gray-400'>React Dev</div>
+                    <h1 className='text-gray-400 text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
+                    <button className='text-black py-2 px-4 rounded-3xl bg-gray-400 opacity-100 text-md font-semibold' onClick={handleDownload}>Download CV</button>
                   </div>
                 </div>
               </div>
 
 
-              <div className='Stacks-boxs shadow-custom rounded-2xl w-full md:w-1/2 lg:w-[50rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
+              <div className='Stacks-boxs shadow-custom rounded-2xl w-full lg:w-[30rem] 2xl:max-w-[40rem] 2xl:min-w-[33rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
                 <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Movicx ?</h1>
                 <p className='text-start text-gray-400'>
-                  Onaiterimoh Victor Idepe, also known as Movicx, is a passionate
-                  Front-end Developer specializing in bringing high quality UI/UX designs
-                  to life. He excels at crafting interactive and user-centric web pages, always striving
-                  to meet and exceed user expectations.
-                  <br />
-                  <span>Happy coding!</span>
+                  Onaiterimoh Victor Idepe is a passionate Frontend Developer specializing in bringing
+                  high-quality UI/UX designs to life. I consider myself a qualified Frontend Developer
+                  because I have worked with teams and delivered excellent results for my previous companies.
+                  I excel at crafting interactive and user-centric web pages,
+                  always striving to meet and exceed user expectations. &nbsp;
+                  <span>Happy Coding!</span>
                 </p>
                 <div className='w-full h-[2px] bg-gray-300'></div>
                 <section className='flex flex-col gap-3 py-2 rounded-2xl'>
                   <h1 className='text-xl font-bold text-[#6371f6]'>My Stacks ?</h1>
                   {/*Stacks*/}
-                  <div className="w-full h-[10rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
+                  <div className="w-full h-[10rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto px-2 py-4">
                     {Stacks1.map((item, id) => (
                       <span key={id} className="HTML py-1 px-6 h-[2rem] m-0 rounded-3xl text-black">{item.stack1}</span>
                     ))}
@@ -150,7 +100,21 @@ function HomePage() {
               </div>
             </section>
           </section>
-          <section className="RightHand bg-transparent w-full md:w-1/2 lg:max-w-[25rem] h-[auto] gap-3 flex flex-col justify-between px-1">
+          <div className='w-full flex justify-between gap-1 h-full'>
+            <div className="px-2 md:px-0 md:max-w-[25rem] w-full hidden md:flex lg:hidden">
+              <div className='Stacks-boxs relative bg-gray-300 w-full h-full shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
+                <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
+                  <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
+                </div>
+                <div className='absolute bottom-0 left-0 right-0 px-3 py-2 md:py-3 gap-1 flex flex-col justify-end items-start bg-opacity-40 w-full bg-black h-auto'>
+                  <div className='text-gray-400'>React Dev</div>
+                  <h1 className='text-gray-400 text-[18px] font-bold'>Onaiterimoh Victor Idepe</h1>
+                  <button className='text-black py-2 px-4 rounded-3xl bg-gray-400 opacity-100 text-md font-semibold' onClick={handleDownload}>Download CV</button>
+                </div>
+              </div>
+            </div>
+
+            <section className="RightHand w-full min-w-[20rem] md:max-w-[23rem] h-full bg-transparent gap-3 flex flex-col justify-between px-1">
             {lastItem.map((project) => (
               <div key={project.id} className='Recent-Project-box bg-white h-[auto] w-full shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
                 <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
@@ -205,6 +169,8 @@ function HomePage() {
               </div>
             </div>
           </section>
+          </div>
+          
         </div>
         <Footer/>
       </main>

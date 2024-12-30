@@ -7,10 +7,14 @@
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  background: rgb(29, 29, 29);
+  background: white;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 html {
@@ -40,18 +44,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  height: 100vh;
-}
+
 .Home{
   height: 100vh;
+  width: 100%;
   background: transparent;
 }
+.LeftHand{
+  width: 100%;
+}
+
 .Home-box{
   height: auto;
   background-color: transparent;
@@ -244,10 +246,21 @@ body {
     opacity: 0;
   }
 }
+
 /* LOADER ENDS HERE */
-@media (max-width: 1280px) {
+@media (min-width: 1300px) {
+  .LeftHand{
+    max-width: 66rem;
+  }
+}
+@media (max-width: 1299px) {
   .LeftHand{
     max-width: 40rem;
+  }
+}
+@media (max-width: 1180px) {
+  .LeftHand{
+    max-width: 60rem;
   }
 }
 
@@ -273,15 +286,8 @@ body {
   .Drawer-container {
     padding-top: 4rem;
   }
-  .Home{
-    height: 100vh;
-    width: 100vw;
-  }
   .Hide-bubble{
     display: none;
-  }
-  .LeftHand{
-    max-width: 97vw;
   }
 
 }
