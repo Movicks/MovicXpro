@@ -78,7 +78,7 @@ function HomePage() {
 
 
               <div className='Stacks-boxs shadow-custom rounded-2xl w-full lg:w-[30rem] 2xl:max-w-[40rem] 2xl:min-w-[33rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
-                <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Movicx ?</h1>
+                <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Victor?</h1>
                 <p className='text-start text-gray-400'>
                   Onaiterimoh Victor Idepe is a passionate Frontend Developer specializing in bringing
                   high-quality UI/UX designs to life. I consider myself a qualified Frontend Developer
