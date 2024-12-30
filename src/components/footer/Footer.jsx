@@ -22,9 +22,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className='footer1_container'>
+    <footer className='footer1_container w-full'>
       <h1 className="heading mb-2">Quick<span> Links</span></h1>
-      <div className='footer-container md:flex align-center'>
+      <div className='footer-container grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 md:align-center w-full md:gap-7'>
         <div className='sec about_us'>
           <h2>About Me</h2>
           <p>I enjoy building interactive and responsive webpages that make my clients happy.</p>
