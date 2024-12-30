@@ -8,11 +8,11 @@ const education = [
 ];
 
 const jobExperience = [
-  { id: 0, year: 'Sept 2024 - Present', title: 'Frontend Developer ( Contract )', company: 'wHTa Networks' },
-  { id: 1, year: '2024 - Dec 2024', title: 'Frontend Developer ( Volunteered )', company: 'Evolve Tech Group' },
-  { id: 2, year: '2024 - Jul 2024', title: 'Frontend Developer ( Contract )', company: 'Miatos Solutions' },
-  { id: 3, year: '2023 - Three Months', title: 'Junior Software Engineering Intern', company: 'ProjectStack (Remote)' },
-  { id: 4, year: '2023 - Three Months', title: 'Frontend Development Intern', company: 'Zuri CDT (Remote)' },
+  { id: 1, year: 'Sept 2024 - Present', title: 'Frontend Developer ( Contract )', company: 'wHTa Networks' },
+  { id: 2, year: '2024 - Dec 2024', title: 'Frontend Developer ( Volunteered )', company: 'Evolve Tech Group' },
+  { id: 3, year: '2024 - Jul 2024', title: 'Frontend Developer ( Contract )', company: 'Maitos Solutions' },
+  { id: 4, year: '2023 - Three Months', title: 'Junior Software Engineering Intern', company: 'ProjectStack (Remote)' },
+  { id: 5, year: '2023 - Three Months', title: 'Frontend Development Intern', company: 'Zuri CDT (Remote)' },
 ];
 
 const Timeline = () => {
