@@ -13,9 +13,8 @@ function ContactPage() {
   // }, []);
 
   return (
-    <section className='h-screen w-full flex Home overflow-hidden'>
-      <div className='Dashboard-resDiv min-w-[15rem] bg-gray-300'></div>
-      <main className='glass-effect-3 h-auto bg-white bg-opacity-50 backdrop-blur-xl flex-grow overflow-auto'>
+    <section className='h-screen w-full flex Home overflow-hidden no-scrollbar'>
+      <main className='glass-effect-3 h-auto bg-white bg-opacity-50 backdrop-blur-xl flex-grow overflow-auto no-scrollbar'>
         <div className='Home-box pt-3 w-full'>
           <section className='Banner-container w-full h-[17rem] px-2'>
             <Banner header='CONTACT US' des='Contact me for your next project.' />
@@ -43,7 +42,7 @@ function ContactPage() {
               </div>
               <div className='flex items-center justify-center bg-[#6371F6] w-full lg:w-[25rem] h-full lg:h-auto sm:h-[20rem] lg:max-h-[25rem]'>
                 <svg
-                  classname={`transform transition-transform duration-300 hover:scale-105`}
+                  className={`transform transition-transform duration-300 hover:scale-105`}
                   xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="350.29496" height="400.19434" viewBox="0 0 891.29496 745.19434" xlink="http://www.w3.org/1999/xlink">
                   <ellipse cx="418.64354" cy="727.19434" rx="352" ry="18" fill="#f2f2f2" />
                   <path d="M778.64963,250.35008h-3.99878V140.80476a63.40187,63.40187,0,0,0-63.4018-63.40193H479.16232a63.40188,63.40188,0,0,0-63.402,63.4017v600.9744a63.40189,63.40189,0,0,0,63.4018,63.40192H711.24875a63.40187,63.40187,0,0,0,63.402-63.40168V328.32632h3.99878Z" transform="translate(-154.35252 -77.40283)" fill="#3f3d56" /><path d="M761.156,141.24713v600.09a47.35072,47.35072,0,0,1-47.35,47.35h-233.2a47.35084,47.35084,0,0,1-47.35-47.35v-600.09a47.3509,47.3509,0,0,1,47.35-47.35h28.29a22.50659,22.50659,0,0,0,20.83,30.99h132.96a22.50672,22.50672,0,0,0,20.83-30.99h30.29A47.35088,47.35088,0,0,1,761.156,141.24713Z" transform="translate(-154.35252 -77.40283)" fill="#fff"/>

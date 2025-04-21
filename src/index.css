@@ -22,6 +22,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 #root {
@@ -45,18 +50,16 @@ html {
 }
 
 
+
 .Home{
   height: 100vh;
   width: 100%;
   background: transparent;
 }
-.LeftHand{
-  width: 100%;
-}
 
 .Home-box{
   height: auto;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 .Avatar-container{
   background: linear-gradient(135deg, #6371f6, #ADB6D8);
@@ -248,7 +251,7 @@ html {
 }
 
 /* LOADER ENDS HERE */
-@media (min-width: 1300px) {
+/* @media (min-width: 1300px) {
   .LeftHand{
     max-width: 66rem;
   }
@@ -262,12 +265,12 @@ html {
   .LeftHand{
     max-width: 60rem;
   }
-}
+} */
 
 @media (min-width: 885px) {
   .Dashboard-resDiv {
     width: 15rem;
-    background: white;
+    /* background: white; */
     display: block;
   }
   .Hide-bubble{

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Box, CssBaseline, AppBar, Toolbar, IconButton, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
