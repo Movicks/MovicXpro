@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LogoAI from '../../assets/Images/LogoAI.jpg'
 import { Link } from 'react-router-dom';
 import { CiLocationArrow1 } from 'react-icons/ci';
@@ -26,10 +26,9 @@ function HomePage() {
 
   return (
     <section className="h-full w-full flex Home hide-scrollbar bg-transparent">
-      <div className="Dashboard-resDiv min-w-[15rem]"></div>
-      <main className="glass-effect-3 bg-transparent w-full h-full">
-        <div className="Home-box flex flex-col lg:items-start lg:flex-row justify-between p-3 gap-3 w-full">
-          <section className="LeftHand pt-10 pl-1 pr-1 pb-3 bg-transparent w-full 2xl:max-w-[68rem] h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
+      <main className="glass-effect-3 bg-transparent w-full h-full ">
+        <div className="Home-box bg-transparent flex flex-col lg:items-start lg:flex-row justify-between p-3 gap-3 w-full">
+          <section className="LeftHan pt-10 pl-1 pr-1 pb-3 bg-transparent w-full h-[auto] flex gap-5 flex-col mb-1 md:mb-0 shadow-custom rounded-[20px] ">
             <div className="Home-Header-main h-[15rem] rounded-2xl pl-2 pt-6 pr-2 flex justify-between w-full relative overflow-hidden">
               <div className='flex flex-col justify-between h-[8.3rem] items-start'>
                 <header className="text-3xl font-bold w-[15.8rem] text-white">Exciting projects every week</header>
@@ -37,7 +36,7 @@ function HomePage() {
                   Projects
                 </Link>
               </div>
-              <div className="Avatar-container absolute bottom-0 right-0 h-[14.9rem] w-[15rem] bg-red-500 rounded-tl-[100%] flex items-end justify-center pl-4">
+              <div className="Avatar-container absolute bottom-0 right-0 h-[14.9rem] w-[15rem] rounded-tl-[100%] flex items-end justify-center pl-4">
                 <img src='https://movicks.github.io/movicx-portfolio-react/assets/DevMovicxBanner-25f4983f.png' alt='Photo' />
               </div>
         
@@ -77,7 +76,7 @@ function HomePage() {
               </div>
 
 
-              <div className='Stacks-boxs shadow-custom rounded-2xl w-full lg:w-[30rem] 2xl:max-w-[40rem] 2xl:min-w-[33rem] h-auto flex flex-col md:mb-0 p-3 gap-1'>
+              <div className='Stacks-boxs shadow-custom max-w-[45rem] rounded-2xl w-full h-auto flex flex-col md:mb-0 p-3 gap-1'>
                 <h1 className='text-xl font-bold text-[#6371f6] underline mt-2'>Who is Victor?</h1>
                 <p className='text-start text-gray-400'>
                   Onaiterimoh Victor Idepe is a passionate Frontend Developer specializing in bringing
@@ -100,8 +99,8 @@ function HomePage() {
               </div>
             </section>
           </section>
-          <div className='w-full flex justify-between gap-1 h-full'>
-            <div className="px-2 md:px-0 md:max-w-[25rem] w-full hidden md:flex lg:hidden">
+          <div className='flex justify-between gap-1 h-full'>
+            <div className="px-2 md:px-0 w-full hidden md:flex lg:hidden">
               <div className='Stacks-boxs relative bg-gray-300 w-full h-full shadow-custom flex justify-end items-end flex-col md:mb-0 rounded-2xl overflow-hidden'>
                 <div className='w-full h-full bg-gray-300 flex items-center justify-center'>
                   <img className='bg-cover h-full w-full' src={LogoAI} alt='photo'/>
@@ -114,7 +113,7 @@ function HomePage() {
               </div>
             </div>
 
-            <section className="RightHand w-full min-w-[20rem] md:max-w-[23rem] h-full bg-transparent gap-3 flex flex-col justify-between px-1">
+            <section className="RightHand w-full min-w-[22rem] md:max-w-[25rem] h-full bg-transparent gap-3 flex flex-col justify-between px-1">
             {lastItem.map((project) => (
               <div key={project.id} className='Recent-Project-box bg-white h-[auto] w-full shadow-custom rounded-3xl px-4 pt-9 pb-3 flex flex-col gap-1'>
                 <h1 className='text-md text-[#6371f6] font-bold'>Most Recent Project</h1>
@@ -126,14 +125,14 @@ function HomePage() {
                     />
                   </div>
                   <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
-                  <div className='w-full max-h-[10rem] lg:h-[10rem] overflow-y-auto'>
+                  <div className='w-full max-h-[10rem] lg:h-[10rem] overflow-y-auto no-scrollbar'>
                     <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                       {project.description}
                     </p>
                   </div>
                   <section className='flex flex-col gap-1 rounded-2xl'>
                     <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
-                    <div className="w-full h-[7.4rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
+                    <div className="w-full h-[7.4rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2 no-scrollbar">
                       {project.stacks.map((stack, stackIndex) => (
                           <span key={stackIndex} className={`HTML py-1 px-4 h-[2rem] m-0 rounded-3xl`}>{stack}</span>
                       ))}
@@ -159,6 +158,7 @@ function HomePage() {
                               type='checkbox'
                               checked={isChecked}
                               onChange={handleChange}
+                              disabled
                           />
                           <span className="slider round"></span>
                       </label>

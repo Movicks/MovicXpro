@@ -1,5 +1,4 @@
-// src/ProjectCard.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import ProjectCardItems from './ProjectData';
@@ -29,9 +28,9 @@ function ProjectCard() {
   };
 
   return (
-    <ul className='w-full px-2 py-2 flex flex-wrap gap-4 lg:gap-2 justify-center lg:justify-start lg:px-2'>
+    <ul className='w-full px-2 py-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-2 justify-center lg:justify-start lg:px-2'>
       {ProjectCardItems.slice(0).reverse().map((project, index) => ( 
-        <li key={project.id} className='Demo-Cards w-[19.3rem] h-[auto] lg:w-[19.3rem]'>
+        <li key={project.id} className='Demo-Cards h-[auto]'>
           <div className='bg-white Project-Card p-2 shadow-custom h-[28rem] rounded-xl flex flex-col gap-2 border-2'>
             <div className='relative flex items-center justify-center mb-2 h-[10rem] Project-Image-container rounded-2xl overflow-hidden'>
               <img 
@@ -57,14 +56,14 @@ function ProjectCard() {
               </div>
             </div>
             <h1 className='font-bold text-md uppercase text-[#6371f6]'>{project.name}</h1>
-            <div className='w-full h-[9rem] lg:h-[7rem] overflow-y-auto'>
+            <div className='w-full h-[9rem] lg:h-[7rem] overflow-y-auto no-scrollbar'>
               <p className='flex flex-wrap text-sm text-gray-400 text-start'>
                 {project.description}
               </p>
             </div>
             <section className='flex flex-col gap-1 rounded-2xl'>
               <h1 className='text-md font-bold text-[#6371f6]'>Stacks</h1>
-              <div className="w-full h-auto max-h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2">
+              <div className="w-full h-auto max-h-[5rem] gap-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex flex-wrap overflow-y-auto p-2 no-scrollbar">
                 {project.stacks.map((stack, stackIndex) => (
                     <span key={stackIndex} className={`HTML py-1 px-4 h-[2rem] m-0 rounded-3xl`}>{stack}</span>
                 ))}
