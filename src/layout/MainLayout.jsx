@@ -59,16 +59,19 @@ function MainLayout() {
                             </div>
                         </Typography>
                     </Box>
-                    <IconButton
-                        color="inherit"
-                        aria-label="GitHub"
-                        edge="end"
-                        href="https://github.com/Movicks"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaGithub className='text-3xl'/>
-                    </IconButton>
+
+                    <Box sx={{ display: 'flex', alignItems: 'center', items: 'center' }}>
+                        <IconButton
+                            color="inherit"
+                            aria-label="GitHub"
+                            edge="end"
+                            href="https://github.com/Movicks"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaGithub className='text-3xl'/>
+                        </IconButton>
+                    </Box>
                 </Toolbar>
             </AppBar>
 
