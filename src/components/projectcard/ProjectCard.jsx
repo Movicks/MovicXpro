@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
-import ProjectCardItems from './ProjectData';
+import ProjectCardItems from '../../data/ProjectData';
 
 function ProjectCard() {
   const [liked, setLiked] = useState([]);

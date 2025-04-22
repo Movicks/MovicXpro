@@ -1,3 +1,4 @@
+// MyApp.jsx
 import Root from './layout/Root';
 import MainLayout from './layout/MainLayout';
 import HomePage from './views/home/HomePage';
@@ -7,6 +8,7 @@ import ResumePage from './views/resume/ResumePage';
 import ContactPage from './views/contact/ContactPage';
 import BlogPost from './views/blog/BlogPost';
 import NotFound from './layout/NotFound';
+import { LazyComponent } from './components/loading/LazyComponent';
 
 export {
     Root,
@@ -17,5 +19,6 @@ export {
     ProjectsPage,
     ResumePage,
     ContactPage,
-    BlogPost
+    BlogPost,
+    LazyComponent
 }

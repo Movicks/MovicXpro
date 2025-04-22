@@ -3,7 +3,7 @@ import LogoAI from '../../assets/Images/LogoAI.jpg'
 import { Link } from 'react-router-dom';
 import { CiLocationArrow1 } from 'react-icons/ci';
 import Footer from '../../components/footer/Footer';
-import ProjectData from '../../components/projectcard/ProjectData';
+import ProjectData from '../../data/ProjectData';
 import Resume from '../../assets/Resume/ResumeMovicx.pdf'
 import { Stacks1 } from '../../components/Stacks1';
 

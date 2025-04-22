@@ -81,6 +81,46 @@ const ProjectData = [
     link: '',
     stacks: ['HTML', 'CSS', 'React', 'Tailwindcss', "Git", "Axios", "APIs"]
   },
+  {
+    id: 8,
+    name: 'Gerald Consultant',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'https://www.geraldconsultant.com/',
+    description: 'A professional website for a law firm, showcasing their legal services, expertise, and client success stories. The site is designed with a focus on professionalism and trust, offering clear navigation and accessibility for potential clients seeking legal advice.',
+    likeCount: 6,
+    link: '',
+    stacks: ['HTML', 'CSS', 'React', 'Typescript', 'Tailwindcss', "Git"]
+  },
+  {
+    id: 9,
+    name: 'iRefer',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'https://www.irefer.ng/',
+    description: 'A referral-based platform designed to connect users with opportunities and rewards through seamless referral tracking and user engagement. Built with a clean interface for ease of use and mobile responsiveness.',
+    likeCount: 6,
+    link: '',
+    stacks: ['HTML', 'CSS', 'Next Js', 'Typescript', 'Tailwindcss', "Git", "Hosting", "Nodemailer", 'Sanity.io']
+  },
+  {
+    id: 10,
+    name: 'Estoy Online',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: 'https://estoyonline-roan.vercel.app/en',
+    description: 'A language learning platform aimed at helping users learn Spanish. Designed for English speakers, it provides interactive lessons and resources to make learning Spanish engaging and effective. Currently in the hosting and domain setup phase for a Turkish client.',
+    likeCount: 9,
+    link: '',
+    stacks: ['HTML', 'CSS', 'Next Js', 'Typescript', 'Tailwindcss', "Git", "Hosting", "Nodemailer"]
+  },
+  {
+    id: 11,
+    name: 'MyArk Consult',
+    Image: 'https://media.istockphoto.com/id/912617272/photo/concept-of-digital-diagram-graph-interfaces-virtual-screen-connections-icon-on-blurred.jpg?s=2048x2048&w=is&k=20&c=g2wJd26WiNlIld_upj90IrjWZ-gEPmDsIwVW1_pRTM8=',
+    demo: ' https://myarkconsult.vercel.app/',
+    description: 'A consulting platform built to support professional development and educational services. Currently undergoing final testing and optimization to ensure smooth deployment and user interaction.',
+    likeCount: 2,
+    link: '',
+    stacks: ['HTML', 'CSS', 'Next Js', 'Typescript', 'Tailwindcss', "Git", "Hosting", "Nodemailer"]
+  }
   ];
   
   export default ProjectData;
