@@ -28,7 +28,7 @@ function ProjectCard() {
   };
 
   return (
-    <ul className='w-full px-2 py-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-2 justify-center lg:justify-start lg:px-2'>
+    <ul className='grid justify-center w-full grid-cols-1 gap-4 px-2 py-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-2 lg:justify-start lg:px-2'>
       {ProjectCardItems.slice(0).reverse().map((project, index) => ( 
         <li key={project.id} className='Demo-Cards h-[auto]'>
           <div className='bg-white Project-Card p-2 shadow-custom h-[28rem] rounded-xl flex flex-col gap-2 border-2'>
@@ -36,22 +36,22 @@ function ProjectCard() {
               <img 
                 src={project.Image} 
                 alt='Project'
-                className='Project-Banner w-full h-full bg-cover rounded-2xl hover:animate-breath'
+                className='w-full h-full bg-cover Project-Banner rounded-2xl hover:animate-breath'
               />
-              <div className='absolute bg-transparent w-full h-full flex flex-col justify-between p-2'>
-                <div className='bg-transparent w-full flex justify-end gap-3 items-center'>
-                  <div className='px-3 rounded-2xl bg-white opacity-80'>
-                    <span className='Like-Counts text-black'>{formatCount(project.likeCount)}</span>
+              <div className='absolute flex flex-col justify-between w-full h-full p-2 bg-transparent'>
+                <div className='flex items-center justify-end w-full gap-3 bg-transparent'>
+                  <div className='px-3 bg-white rounded-2xl opacity-80'>
+                    <span className='text-black Like-Counts'>{formatCount(project.likeCount)}</span>
                   </div>
-                  <Link to={project.link}
-                    className='Like-Project-btn p-1 bg-white rounded-full opacity-90' 
+                  <a href={project.link}
+                    className='p-1 bg-white rounded-full Like-Project-btn opacity-90' 
                     onClick={() => handleLike(index)}
                   >
                     <FaGithub className={`Like-Project-btn-Icon text-2xl ${liked[index] ? 'text-[#4759fc]' : 'text-black'}`} />
-                  </Link>
+                  </a>
                 </div>
                 <div className=''>
-                  <Link to={project.demo} className='Demo bg-white opacity-90 px-4 py-2 rounded-3xl'>Live Preview</Link>
+                  <a href={project.demo} className='px-4 py-2 bg-white Demo opacity-90 rounded-3xl'>Live Preview</a>
                 </div>
               </div>
             </div>
