@@ -17,7 +17,7 @@
     bottom: 0;
     left: 20px; /* Adjust for marker size */
     width: 2px;
-    background: #e5e7eb; /* Tailwind CSS gray-300 */
+    background: #414141; /* Tailwind CSS gray-300 */
   }
   
   .timeline-item:nth-child(even) .timeline-content {

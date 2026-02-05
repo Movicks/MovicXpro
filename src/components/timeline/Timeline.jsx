@@ -19,15 +19,15 @@ const Timeline = () => {
   return (
     <div className="timeline-container my-5 px-5 lg:grid lg:grid-cols-2 lg:gap-9">
       <div>
-        <h2 className="text-xl font-bold mb-5">Education</h2>
+        <h2 className="text-xl font-bold mb-5 gradient-text">Education</h2>
         {education.map((item) => (
           <div key={item.id} className="timeline-item mb-8 flex lg:flex-row-reverse">
-            <div className="timeline-content bg-white p-5 rounded-lg shadow-md max-w-xs w-full ml-6 lg:ml-0 lg:mr-6">
-              <h3 className="text-lg font-semibold mb-2 text-[#6371F6]">{item.degree}</h3>
-              <time className="text-sm text-gray-500">{item.year}</time>
-              <p className="mt-2">{item.school}</p>
+            <div className="timeline-content Container-Bg border border-white/15 p-5 rounded-lg shadow-md max-w-xs w-full ml-6 lg:ml-0 lg:mr-6">
+              <h3 className="text-lg font-semibold mb-2 gradient-text">{item.degree}</h3>
+              <time className="text-sm text-gray-400">{item.year}</time>
+              <p className="mt-2 text-white/80">{item.school}</p>
             </div>
-            <div className="timeline-marker w-10 h-10 rounded-full bg-[#6371F6] flex items-center justify-center text-white font-bold absolute left-0 lg:left-auto lg:hidden">
+            <div className="timeline-marker w-10 h-10 rounded-full Container-Bg border border-white/15 flex items-center justify-center text-white font-bold absolute left-0 lg:left-auto lg:hidden">
               {item.id}
             </div>
           </div>
@@ -35,15 +35,15 @@ const Timeline = () => {
       </div>
 
       <div>
-        <h2 className="text-xl font-bold mb-5">Job Experience</h2>
+        <h2 className="text-xl font-bold mb-5 gradient-text">Job Experience</h2>
         {jobExperience.map((job) => (
           <div key={job.id} className="timeline-item mb-8 flex lg:flex-row-reverse">
-            <div className="timeline-content bg-white p-5 rounded-lg shadow-md max-w-xs w-full ml-6 lg:ml-0 lg:mr-6">
-              <h3 className="text-lg font-semibold mb-2 text-[#6371F6]">{job.title}</h3>
-              <time className="text-sm text-gray-500">{job.year}</time>
-              <p className="mt-2">{job.company}</p>
+            <div className="timeline-content Container-Bg border border-white/15 p-5 rounded-lg shadow-md max-w-xs w-full ml-6 lg:ml-0 lg:mr-6">
+              <h3 className="text-lg font-semibold mb-2 gradient-text">{job.title}</h3>
+              <time className="text-sm text-gray-400">{job.year}</time>
+              <p className="mt-2 text-white/80">{job.company}</p>
             </div>
-            <div className="timeline-marker w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold absolute left-0 lg:left-auto lg:hidden">
+            <div className="timeline-marker w-10 h-10 rounded-full Container-Bg border border-white/15 flex items-center justify-center text-white font-bold absolute left-0 lg:left-auto lg:hidden">
               {job.id}
             </div>
           </div>

@@ -120,6 +120,16 @@ const ProjectData = [
     likeCount: 2,
     link: '',
     stacks: ['HTML', 'CSS', 'Next Js', 'Typescript', 'Tailwindcss', "Git", "Hosting", "Nodemailer"]
+  },
+  {
+    id: 12,
+    name: 'Ramona Jewels',
+    Image: '/ramona.png',
+    demo: 'https://ramona-jewels-client.vercel.app/',
+    description: 'A full stack jewelry e-commerce platform that allows users to browse, search, and purchase a wide range of high-quality jewelry items. The platform features a user-friendly interface, secure payment gateways using stripe, and a smooth shopping experience.',
+    likeCount: 2,
+    link: '',
+    stacks: ['Next Js', 'Typescript', 'Tailwindcss', "Git", "Node Js", "Express Js", "MongoDB", "Nodemailer"]
   }
   ];
   

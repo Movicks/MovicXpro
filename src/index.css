@@ -4,10 +4,21 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
+:root {
+  --bg-color: linear-gradient(135deg, black, #a5a5a7);
+  --main-hero-color: linear-gradient(135deg, #0b0b0b, #c0c5d2);
+  --main-hero-avatar-color: linear-gradient(135deg, #000000, #cfcfcfab);
+  --primary-text-color-black: #000000;
+  --primary-black: black;
+  --secondary-black: #0f0f0f;
+  --black-footer: #080808;
+  --container-bg: #0d1117;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background: white;
+  background: var(--primary-black);
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   display: flex;
@@ -23,6 +34,27 @@ html {
   scroll-padding-top: 6rem;
   overflow-x: hidden;
   scrollbar-width: none;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #4b5563, /* gray-600 */
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.Container-Bg{
+  background-color: var(--secondary-black);
+}
+
+.Global-text-color{
+  color: var(--primary-text-color-black);
 }
 
 .transition-colors {
@@ -56,7 +88,6 @@ html {
 }
 
 
-
 .Home{
   height: 100vh;
   width: 100%;
@@ -68,7 +99,7 @@ html {
   /* background-color: transparent; */
 }
 .Avatar-container{
-  background: linear-gradient(135deg, #6371f6, #ADB6D8);
+  background: var(--main-hero-avatar-color);
 }
 .Avatar-container img{
   width: 15rem;
@@ -81,7 +112,7 @@ html {
   background-color: rgba(255, 255, 255, 0.788);
   border: 1px solid rgba(168, 168, 168, 0.81);
   font-size: larger;
-  color: #6371f6;
+  color: var(--primary-text-color-black);
   transition: 0.3s ease-in-out;
 }
 .glass-effect:hover {
@@ -92,7 +123,7 @@ html {
 }
 
 .glass-effect-2 {
-  background: linear-gradient(135deg, #848FF1, #ADB6D8);
+  background: var(--bg-color);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -103,7 +134,7 @@ html {
   height: 100vh;
 }
 .Home-Header-main{
-  background: linear-gradient(135deg, #848FF1, #ADB6D8);
+  background: var(--main-hero-color);
 }
 /* STACKS STYLE */
 .HTML{
@@ -112,7 +143,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(107, 107, 107);
+  color: rgb(253, 253, 253);
 }
 /* ENDS */
 
@@ -255,23 +286,6 @@ html {
     opacity: 0;
   }
 }
-
-/* LOADER ENDS HERE */
-/* @media (min-width: 1300px) {
-  .LeftHand{
-    max-width: 66rem;
-  }
-}
-@media (max-width: 1299px) {
-  .LeftHand{
-    max-width: 40rem;
-  }
-}
-@media (max-width: 1180px) {
-  .LeftHand{
-    max-width: 60rem;
-  }
-} */
 
 @media (min-width: 885px) {
   .Dashboard-resDiv {
@@ -432,16 +446,6 @@ html {
     height: 15rem; /* Increased size */
     opacity: 0;
   }
-}
-
-/* Availability.css */
-
-.availability-container {
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .switch {

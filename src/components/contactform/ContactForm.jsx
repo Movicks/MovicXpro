@@ -73,24 +73,24 @@ function ContactForm() {
 
   return (
     <section className="w-full my-10 flex items-center justify-center px-3">
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center w-full md:w-auto">
         <div className="flex flex-col items-center justify-center">
-          <span className="px-2 py-1 bg-[#d7dbffd0] text-[#6371f6] text-xs mb-2">
+          <span className="px-7 py-2 bg-white text-black text-sm mb-2">
             CONTACT ME
           </span>
-          <h1 className="text-xl font-bold">Write me a message</h1>
+          <h1 className="text-xl md:font-bold text-white/50">Write me a message</h1>
         </div>
         <form
-          className="w-full max-w-[60rem] h-auto flex flex-col items-center gap-5 mt-5 shadow-custom px-3 pt-10 pb-4 rounded-xl"
+          className="w-full max-w-[60rem] h-auto flex flex-col items-center border border-white/15 Container-Bg gap-5 mt-5 shadow-custom px-3 pt-10 pb-4 rounded-xl"
           onSubmit={handleSubmit}
           aria-label="Contact form"
         >
-          <div className="flex lg:flex-row justify-center gap-3 w-full lg:gap-9">
+          <div className="flex flex-col md:flex-row justify-center gap-3 w-full lg:gap-6">
             <div className="flex-1 min-w-[9.7rem] md:w-[20rem]">
               <input
                 type="text"
                 placeholder="Full name"
-                className="w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none"
+                className="w-full p-2 border-none text-white/50 rounded bg-white/15 focus:outline-none"
                 aria-label="Full name"
                 name="fullName"
                 value={formData.fullName}
@@ -101,7 +101,7 @@ function ContactForm() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none"
+                className="w-full p-2 border-none text-white/50 rounded bg-white/15 focus:outline-none"
                 aria-label="Email address"
                 name="email"
                 value={formData.email}
@@ -109,12 +109,12 @@ function ContactForm() {
               />
             </div>
           </div>
-          <div className="flex lg:flex-row justify-center gap-3 w-full lg:gap-9">
+          <div className="flex flex-col md:flex-row justify-center gap-3 w-full lg:gap-6">
             <div className="flex-1 min-w-[9.7rem] lg:w-[18rem]">
               <input
                 type="tel"
                 placeholder="Phone"
-                className="w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none"
+                className="w-full p-2 border-none text-white/50 rounded bg-white/15 focus:outline-none"
                 aria-label="Phone"
                 name="phone"
                 value={formData.phone}
@@ -125,7 +125,7 @@ function ContactForm() {
               <input
                 type="text"
                 placeholder="Title"
-                className="w-full p-2 border-none rounded bg-[#d7dbffd0] focus:outline-none"
+                className="w-full p-2 border-none text-white/50 rounded bg-white/15 focus:outline-none"
                 aria-label="Title"
                 name="title"
                 value={formData.title}
@@ -137,7 +137,7 @@ function ContactForm() {
             <div className="flex-1 min-w-[9.7rem] lg:w-[18rem]">
               <textarea
                 placeholder="Message"
-                className="w-full bg-[#d7dbffd0] h-[7rem] p-2 border-none flex flex-wrap resize-none focus:outline-none rounded"
+                className="w-full bg-white/15 text-white/50 h-[7rem] p-2 border-none flex flex-wrap resize-none focus:outline-none rounded"
                 aria-label="Message"
                 name="message"
                 value={formData.message}
@@ -146,7 +146,7 @@ function ContactForm() {
             </div>
           </div>
           <button
-            className="bg-[#6371f6] px-20 py-3 rounded text-white"
+            className="bg-white/90 px-20 py-3 rounded text-black"
             type="submit"
           >
             Send Message
