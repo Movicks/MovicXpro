@@ -26,8 +26,8 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
   }, []);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: 'transparent' }} className='drawer-container pt-[4rem] flex flex-col gap-2 bg-[rgba(10, 10, 73, 0.2)] overflow-auto scrollbar-hide'>
-      <List sx={{ backgroundColor: 'transparent' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: '#0d1117' }} className='drawer-container pt-[4rem] flex flex-col gap-2 overflow-auto scrollbar-hide'>
+      <List sx={{ backgroundColor: '#0f0f0f' }}>
         {[
           { text: 'Home', path: '/' },
           { text: 'About Me', path: '/about' },
@@ -42,9 +42,9 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
             to={item.path}
             sx={{
               background: location.pathname === item.path 
-                ? 'linear-gradient(135deg, rgba(88, 99, 246, 0.76), rgba(10, 10, 73, 0.2))' 
+                ? 'linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(5, 5, 5, 0.21))' 
                 : 'transparent',
-              color: location.pathname === item.path ? 'white' : '',
+              color: location.pathname === item.path ? 'black' : '#9ea5b1',
               ml: 0.5,
               borderTopLeftRadius: location.pathname === item.path ? '20px' : 0,
               borderBottomLeftRadius: location.pathname === item.path ? '20px' : 0,
@@ -58,7 +58,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
           </ListItemButton>
         ))}
       </List>
-      <div className='bg-gray-300 h-[2px]'></div>
+      <div className='bg-white/15 rounded-full h-[2px]'></div>
       <section className='sidebar-profile pl-2 pr-2'>
         <div className='glass-effect-2 rounded-2xl overflow-hidden shadow-custom'>
           <div className='img-container pt-9 flex flex-col gap-3'>
@@ -66,8 +66,8 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
               <h1 className='text-white font-bold text-[16px]'>Onaiterimoh Victor Idepe</h1>
               <p className='text-gray-200'>Frontend Developer</p>
             </div>
-            <section className='h-[14rem] w-full bg-[rgba(10, 10, 73, 0.2)] shadow-custom rounded-2xl relative'>
-              <div className='shadow-custom border-2 border-[rgba(10, 10, 73, 0.2)] h-full rounded-2xl overflow-hidden'>
+            <section className='h-[14rem] w-full bg-[rgba(17, 16, 16, 0.2)] shadow-custom rounded-2xl relative'>
+              <div className='shadow-custom border-t border-white/15 h-full rounded-2xl overflow-hidden'>
                 <img
                   className='w-full h-full bg-cover'
                   src='https://pbs.twimg.com/media/F--THcTXIAAMb0K.jpg'
@@ -94,13 +94,15 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
             </div>
           </div>
         </div>
-        <div className='w-full h-[2px] bg-gray-300 mt-3'></div>
+
+        <div className='w-full h-[2px] bg-white/15 rounded-full mt-3'></div>
+
         <section className='w-full h-[auto] flex flex-col items-start pt-1'>
-          <h1 className='text-lg text-blue-500'>Previous Tech Events</h1>
+          <h1 className='text-lg text-gray-300'>Previous Tech Events</h1>
           <section className='w-full flex flex-col gap-2 items-start pb-2 pt-1'>
             <Link to='https://www.instagram.com/p/C9DFiKgIiuO/?igsh=MXd2eXNjNmowYmJmdw==' className='shadow-custom py-1 flex flex-col w-full px-2'>
-              <h3 className='flex items-center text-gray-500'>GenZ Tech Event Tickets</h3>
-              <span className='flex items-center text-sm text-gray-400'>August - 2024</span>
+              <h3 className='flex items-center text-gray-400'>GenZ Tech Event Tickets</h3>
+              <span className='flex items-center text-sm text-gray-300'>August - 2024</span>
             </Link>
             <span className='w-full flex justify-center text-xs text-gray-400'>No more events for now</span>
           </section>
@@ -117,7 +119,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
         onClose={handleDrawerToggle}
         sx={{
           display: { xs: 'block', sm: 'block', md: 'block', lg: 'block' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'white', borderRight: '3px solid #d1d5db' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'white', borderRight: '1px solid #292929' },
         }}
       >
         {drawer}
@@ -127,7 +129,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, isMobile, isTablet }) => {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'none', md: 'block', lg: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#fff', borderRight: '3px solid #d1d5db' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#fff', borderRight: '2px solid #292929' },
           }}
           open
         >

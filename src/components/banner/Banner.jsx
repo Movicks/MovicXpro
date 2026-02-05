@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoAI from '../../assets/Images/LogoAI.jpg';
+import LogoAI from '../../assets/Images/MOVICX.png';
 
 function Banner({ header, des }) {
   return (

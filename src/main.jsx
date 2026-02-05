@@ -10,7 +10,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { Root, MainLayout, NotFound, LazyComponent } from "./MyApp";
+import { Root, MainLayout, NotFound, LazyComponent } from "./App";
 
 // Lazy-loaded page components
 export const HomePage = lazy(() => import("./views/home/HomePage"));

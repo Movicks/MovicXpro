@@ -13,34 +13,34 @@ function ContactPage() {
   // }, []);
 
   return (
-    <section className='h-screen w-full flex Home overflow-hidden no-scrollbar'>
+    <section className='h-screen w-full flex Home overflow-hidden no-scrollbar lg:px-5'>
       <main className='glass-effect-3 h-auto bg-white bg-opacity-50 backdrop-blur-xl flex-grow overflow-auto no-scrollbar'>
         <div className='Home-box pt-3 w-full'>
           <section className='Banner-container w-full h-[17rem] px-2'>
             <Banner header='CONTACT US' des='Contact me for your next project.' />
           </section>
           <section className='w-full h-auto my-2 flex items-center justify-center px-2'>
-            <div className='Contact-container w-full max-w-[60rem] lg:h-[25rem] shadow-custom flex flex-col lg:flex-row'>
+            <div className='Contact-container Container-Bg border border-white/15 rounded-2xl w-full max-w-[60rem] lg:h-[25rem] shadow-custom flex flex-col lg:flex-row'>
               <div className='w-full lg:w-[35rem] h-full lg:h-auto sm:h-[20rem] lg:max-h-[25rem] px-10 py-5 lg:px-20 lg:py-20 flex flex-col justify-between'>
                 <div>
-                  <h1 className='text-xl font-bold pb-2'>Get In Touch</h1>
-                  <p className='text-gray-400'>Don't be shy, contact me.</p>
-                  <p className='text-gray-400'>Let us bring your dreams to reality</p>
+                  <h1 className='text-xl font-bold pb-2 gradient-text'>Get In Touch</h1>
+                  <p className='text-gray-500'>Don't be shy, contact me.</p>
+                  <p className='text-gray-500'>Let us bring your dreams to reality</p>
                 </div>
-                <div className='w-full h-[2px] bg-gray-300 my-3'></div>
+                <div className='w-full h-[2px] bg-white/15 my-2'></div>
                 <div>
                   <div className='flex gap-2 items-center'>
-                    <TbPhoneCalling className='text-4xl text-[#6371F6]' />
+                    <TbPhoneCalling className='text-4xl text-white/50' />
                     <div>
                       <Link to='tel:+2349039062234' className='text-sm text-gray-400'>
                         +2349039062234
                       </Link>
-                      <h3 className='text-sm text-[#6371F6]'>victoride013@gmail.com</h3>
+                      <h3 className='text-sm gradient-text'>victoride013@gmail.com</h3>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className='flex items-center justify-center bg-[#6371F6] w-full lg:w-[25rem] h-full lg:h-auto sm:h-[20rem] lg:max-h-[25rem]'>
+              <div className='flex items-center justify-center bg-white w-full lg:w-[25rem] h-full lg:h-auto sm:h-[20rem] lg:max-h-[25rem]'>
                 <svg
                   className={`transform transition-transform duration-300 hover:scale-105`}
                   xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="350.29496" height="400.19434" viewBox="0 0 891.29496 745.19434" xlink="http://www.w3.org/1999/xlink">
@@ -76,9 +76,9 @@ function ContactPage() {
           </section>
           <section className='w-full my-5 flex items-center justify-center px-2'>
             <div className='w-full max-w-[60rem] h-[auto] flex items-center gap-2'>
-              <div className='w-full h-[2px] bg-gray-300'></div>
-              <span className='text-gray-400'>OR</span>
-              <div className='w-full h-[2px] bg-gray-300'></div>
+              <div className='w-full h-[2px] bg-white/20'></div>
+              <span className='text-white/50'>OR</span>
+              <div className='w-full h-[2px] bg-white/20'></div>
             </div>
           </section>
           <ContactForm/>

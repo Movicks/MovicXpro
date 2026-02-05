@@ -7,7 +7,6 @@
      text-align: center;
      font-size: 1.5rem;
      font-weight: 600;
-     color: #6371f6;
      padding: 5px 15px;
      margin: 0.4rem 0;
      margin-bottom: -7px;
@@ -31,9 +30,8 @@
  .about .row .video-container {
      flex: 1 1 15rem;
      height: 26rem;
-     border: 2px solid #6371f6;
      border-radius: 2rem;
-     box-shadow: 0 0 10px #6371f6;
+     box-shadow: 0 0 10px #9da4b0;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -43,24 +41,23 @@
  }
  @keyframes glowing{
      0% {
-         box-shadow: 0 0 10px #6371f6; /* Start with a small glow */
+         box-shadow: 0 0 10px #9da4b0; /* Start with a small glow */
        }
        50% {
-         box-shadow: 0 0 20px #6371f6; /* Increase the glow midway through the animation */
+         box-shadow: 0 0 20px #9da4b0; /* Increase the glow midway through the animation */
        }
        100% {
-         box-shadow: 0 0 10px #6371f6; /* Return to the original glow at the end */
+         box-shadow: 0 0 10px #9da4b0; /* Return to the original glow at the end */
        }
  }
  .video_row{
-     border: 2px solid #6371f6;
      border-radius: 2rem;
      width: 18rem;
      height: 22rem;
      display: flex;
      align-items: center;
      justify-content: center;
-     background: #6371f6;
+     background: linear-gradient(135deg, #9da4b0, #000000);
      overflow: hidden;
      margin: 2px 20px;
      animation: glowing 2s infinite;
@@ -105,7 +102,7 @@
      padding: 5px 15px;
  }
  .content>h3{
-     background: #6372f6cb;
+     background: linear-gradient(135deg, #9da4b0, #000000);
      width: 170px;
      text-align: center;
      font-size: 19px;
@@ -130,14 +127,14 @@
      align-items: center;
      justify-content: center;
      border-radius: 8px;
-     border: 2px solid #6371f6;
-     color: #6371f6;
+     border: 1px solid #9da4b0;
+     color: #9da4b0;
      padding: .7rem 1.3rem;
      cursor: pointer;
      font-size: 19px;
      font-weight: 600;
      letter-spacing: 1px;
-     box-shadow: 0 0 10px #6371f6;
+     box-shadow: 0 0 10px #9da4b0;
      margin: 10px;
      transition: 0.5s;
  }
