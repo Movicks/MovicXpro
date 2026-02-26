@@ -233,7 +233,7 @@ html {
 /* LOADER STYLES STARTS HERE */
 .container {
   --uib-size: 45px;
-  --uib-color: #6371f6;
+  --uib-color: white;
   --uib-speed: 1.75s;
   --uib-bg-opacity: .1;
   height: 31.25px;
