@@ -2,7 +2,7 @@ import React from 'react';
 import './Timeline.css'; 
 
 const education = [
-  { id: 1, year: '2024', degree: 'Bachelor of Science in Computer Science', school: 'Global Wealth University Lome Togo' },
+  { id: 1, year: '2024', degree: 'Higher National Diploma (Computer Science)', school: 'Adecom College Of Business & Management' },
   { id: 2, year: '2023', degree: 'Awarded by David J. Malan', school: 'Havard Univerty CS50x' },
   { id: 3, year: '2021', degree: 'British Columbia', school: 'Ministry of Justice, British Columbia, Canada' },
 ];
